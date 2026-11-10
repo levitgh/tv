@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wohnzimmer</title>
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+  body {
+    background: #0b0d12;
+    color: #e9e6df;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    transition: background 4s ease;
+  }
+  #stage {
+    position: absolute; left: 0; top: 0; right: 0; bottom: 0;
+    padding: 5.5vh 5vw;
+    -webkit-transition: -webkit-transform 3s ease; transition: transform 3s ease;
+  }
+  /* Kopf: Uhr links, Wetter jetzt rechts */
+  #top { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; justify-content: space-between; -webkit-box-align: start; -webkit-align-items: flex-start; align-items: flex-start; }
+  #clock { font-size: 17vw; font-weight: 200; line-height: 0.9; letter-spacing: -0.04em; }
+  #clock .sec { font-size: 4vw; color: #6f7480; letter-spacing: 0; margin-left: 1vw; vertical-align: top; position: relative; top: 2.2vw; }
+  #date { font-size: 2.3vw; color: #a9a59c; margin-top: 2.2vh; font-weight: 300; }
+  #greet { font-size: 1.5vw; color: #6f7480; margin-top: 1vh; font-weight: 300; }
+
+  #now { text-align: right; padding-top: 1.2vw; }
+  #now .temp { font-size: 7vw; font-weight: 200; line-height: 1; }
+  #now .desc { font-size: 1.9vw; color: #a9a59c; margin-top: 1vh; font-weight: 300; }
+  #now .meta { font-size: 1.25vw; color: #6f7480; margin-top: 1vh; }
+  #now svg { width: 5vw; height: 5vw; vertical-align: middle; margin-right: 1vw; position: relative; top: -0.6vw; }
+
+  /* Unterer Bereich */
+  #bottom { position: absolute; left: 5vw; right: 5vw; bottom: 6vh; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-align: end; -webkit-align-items: flex-end; align-items: flex-end; }
+  .panel { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; }
+  .panel + .panel { margin-left: 4vw; }
+  .label { font-size: 1.05vw; letter-spacing: 0.18em; text-transform: uppercase; color: #6f7480; margin-bottom: 2vh; }
+
+  /* Vorhersage */
+  #forecast { display: -webkit-box; display: -webkit-flex; display: flex; }
+  .day { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; border-top: 1px solid #262a33; padding-top: 1.6vh; }
+  .day + .day { margin-left: 1.6vw; }
+  .day .d { font-size: 1.3vw; color: #a9a59c; }
+  .day svg { width: 2.8vw; height: 2.8vw; margin: 1.2vh 0; }
+  .day .t { font-size: 1.6vw; font-weight: 300; }
+  .day .t span { color: #6f7480; margin-left: 0.6vw; }
+  .day .r { font-size: 1vw; color: #6f8fb3; margin-top: 0.6vh; }
+
+  /* Garmin */
+  #garmin { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
+  .stat { width: 33.33%; border-top: 1px solid #262a33; padding: 1.6vh 1vw 2vh 0; box-sizing: border-box; }
+  .stat .v { font-size: 2.6vw; font-weight: 200; line-height: 1.05; }
+  .stat .v small { font-size: 1.1vw; color: #6f7480; margin-left: 0.3vw; font-weight: 400; }
+  .stat .k { font-size: 1vw; color: #a9a59c; margin-top: 0.6vh; }
+  .stat .n { font-size: 0.9vw; color: #6f7480; margin-top: 0.3vh; }
+  .bar { height: 0.35vh; background: #262a33; margin-top: 1vh; width: 85%; }
+  .bar i { display: block; height: 100%; background: #c9b98f; }
+  .warn { color: #d9a46a !important; }
+  #stand { font-size: 0.85vw; color: #4a4f59; margin-top: 1.2vh; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="top">
+    <div>
+      <div id="clock">--:--</div>
+      <div id="date"></div>
+      <div id="greet"></div>
+    </div>
+    <div id="now">
+      <div class="temp" id="nowTemp">–</div>
+      <div class="desc" id="nowDesc">Wetter wird geladen …</div>
+      <div class="meta" id="nowMeta"></div>
+    </div>
+  </div>
+
+  <div id="bottom">
+    <div class="panel">
+      <div class="label">Braunschweig · nächste Tage</div>
+      <div id="forecast"></div>
+    </div>
+    <div class="panel">
+      <div class="label">Garmin · gestern &amp; letzte Nacht</div>
+      <div id="garmin"></div>
+      <div id="stand"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ======= GARMIN-DATEN (werden beim Aktualisieren ersetzt) ======= */
+var GARMIN = {
+  stand: "2026-11-10",
+  schritte: 8618, schritteZiel: 7500,
+  schlafMin: 438,            /* 00:05 – 07:23 */
+  schlafScore: 71,
+  bodyBatteryWake: 42,
+  hrv: 34, hrvWoche: 41, hrvStatus: "UNBALANCED",
+  ruhepuls: 59, ruhepuls7: 55,
+  bereitschaft: 30,
+  wochenSchnitt: [7188, 11122, 11577, 12856]  /* letzte 4 Wochen, älteste zuerst */
+};
+/* ================================================================ */
+
+var LAT = 52.2689, LON = 10.5268;
+var TAGE = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
+var TAGE_K = ["So","Mo","Di","Mi","Do","Fr","Sa"];
+var MONATE = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+
+function pad(n) { return n < 10 ? "0" + n : "" + n; }
+function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
+function $(id) { return document.getElementById(id); }
+
+/* ---- Uhr ---- */
+function tick() {
+  var d = new Date();
+  $("clock").innerHTML = pad(d.getHours()) + ":" + pad(d.getMinutes()) + '<span class="sec">' + pad(d.getSeconds()) + "</span>";
+  $("date").textContent = TAGE[d.getDay()] + ", " + d.getDate() + ". " + MONATE[d.getMonth()];
+  var h = d.getHours();
+  $("greet").textContent = h < 5 ? "Gute Nacht" : h < 11 ? "Guten Morgen" : h < 17 ? "Guten Tag" : h < 22 ? "Guten Abend" : "Gute Nacht";
+}
+
+/* Hintergrund passend zur Tageszeit */
+function sky() {
+  var h = new Date().getHours();
+  var bg = h < 6 ? "#07080c" : h < 9 ? "#14131a" : h < 17 ? "#10141b" : h < 21 ? "#15111a" : "#0a0b10";
+  document.body.style.background = bg;
+}
+
+/* Kleines Verschieben gegen Einbrennen */
+var drift = 0;
+function shift() {
+  drift = (drift + 1) % 4;
+  var o = [[0,0],[6,4],[0,8],[-6,4]][drift];
+  var t = "translate(" + o[0] + "px," + o[1] + "px)";
+  $("stage").style.webkitTransform = t; $("stage").style.transform = t;
+}
+
+/* ---- Wetter-Icons (inline SVG, keine Emojis) ---- */
+function icon(code, night) {
+  var s = 'stroke="#e9e6df" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"';
+  var sun = night
+    ? '<path d="M15 4a7 7 0 1 0 5 12 6 6 0 0 1-5-12z" ' + s + '/>'
+    : '<circle cx="12" cy="12" r="4.2" ' + s + '/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" ' + s + '/>';
+  var cloud = '<path d="M7 18h10a4 4 0 0 0 .6-7.95A5.5 5.5 0 0 0 7.1 11 3.5 3.5 0 0 0 7 18z" ' + s + '/>';
+  var body;
+  if (code === 0) body = sun;
+  else if (code <= 2) body = '<g transform="translate(-3,-4) scale(.7)">' + sun + '</g><g transform="translate(2,2) scale(.85)">' + cloud + '</g>';
+  else if (code === 3 || code === 45 || code === 48) body = cloud + (code >= 45 ? '<path d="M5 21h14" ' + s + '/>' : '');
+  else if ((code >= 71 && code <= 77) || code === 85 || code === 86) body = '<g transform="translate(0,-3)">' + cloud + '</g><path d="M8 20h.01M12 21h.01M16 20h.01" stroke="#e9e6df" stroke-width="2.4" stroke-linecap="round"/>';
+  else if (code >= 95) body = '<g transform="translate(0,-3)">' + cloud + '</g><path d="M13 16l-2 4h3l-2 4" ' + s + '/>';
+  else body = '<g transform="translate(0,-3)">' + cloud + '</g><path d="M8 18l-1 3M12 18l-1 3M16 18l-1 3" stroke="#6f8fb3" stroke-width="1.6" stroke-linecap="round"/>';
+  return '<svg viewBox="0 0 24 24">' + body + '</svg>';
+}
+function wtext(c) {
+  if (c === 0) return "Klar";
+  if (c === 1) return "Überwiegend klar";
+  if (c === 2) return "Teils bewölkt";
+  if (c === 3) return "Bedeckt";
+  if (c === 45 || c === 48) return "Nebel";
+  if (c >= 51 && c <= 57) return "Nieselregen";
+  if (c >= 61 && c <= 67) return "Regen";
+  if (c >= 71 && c <= 77) return "Schnee";
+  if (c >= 80 && c <= 82) return "Regenschauer";
+  if (c === 85 || c === 86) return "Schneeschauer";
+  if (c >= 95) return "Gewitter";
+  return "";
+}
+
+/* ---- Wetter laden (Open-Meteo, kostenlos, ohne Schlüssel) ---- */
+function weather() {
+  var url = "https://api.open-meteo.com/v1/forecast?latitude=" + LAT + "&longitude=" + LON +
+    "&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,relative_humidity_2m,is_day" +
+    "&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset" +
+    "&timezone=Europe%2FBerlin&forecast_days=4";
+  var x = new XMLHttpRequest();
+  x.open("GET", url, true);
+  x.timeout = 15000;
+  x.onload = function () {
+    try {
+      var w = JSON.parse(x.responseText), c = w.current, d = w.daily;
+      $("nowTemp").innerHTML = icon(c.weather_code, !c.is_day) + Math.round(c.temperature_2m) + "°";
+      $("nowDesc").textContent = wtext(c.weather_code) + " · gefühlt " + Math.round(c.apparent_temperature) + "°";
+      var sr = d.sunrise[0].slice(11, 16), ss = d.sunset[0].slice(11, 16);
+      $("nowMeta").textContent = "Wind " + Math.round(c.wind_speed_10m) + " km/h · Feuchte " + c.relative_humidity_2m + " % · ↑ " + sr + "  ↓ " + ss;
+      var html = "";
+      for (var i = 0; i < 4; i++) {
+        var dt = new Date(d.time[i] + "T12:00:00");
+        var name = i === 0 ? "Heute" : i === 1 ? "Morgen" : TAGE_K[dt.getDay()];
+        html += '<div class="day"><div class="d">' + name + "</div>" + icon(d.weather_code[i], false) +
+          '<div class="t">' + Math.round(d.temperature_2m_max[i]) + "°<span>" + Math.round(d.temperature_2m_min[i]) + "°</span></div>" +
+          '<div class="r">' + (d.precipitation_probability_max[i] || 0) + " % Regen</div></div>";
+      }
+      $("forecast").innerHTML = html;
+    } catch (e) { fail(); }
+  };
+  x.onerror = x.ontimeout = fail;
+  x.send();
+}
+function fail() {
+  if ($("nowTemp").textContent === "–") $("nowDesc").textContent = "Wetter gerade nicht erreichbar";
+}
+
+/* ---- Garmin-Kacheln ---- */
+function garmin() {
+  var g = GARMIN;
+  var h = Math.floor(g.schlafMin / 60), m = g.schlafMin % 60;
+  var pct = Math.min(100, Math.round(g.schritte / g.schritteZiel * 100));
+  var trend = g.wochenSchnitt[3] - g.wochenSchnitt[2];
+  var hrvTxt = { BALANCED: "ausgeglichen", UNBALANCED: "unausgeglichen", LOW: "niedrig", POOR: "schlecht" }[g.hrvStatus] || "";
+  var tiles = [
+    { v: fmt(g.schritte), k: "Schritte", n: pct >= 100 ? "Ziel erreicht ✓" : pct + " % vom Ziel", bar: pct },
+    { v: h + '<small>h</small> ' + pad(m) + '<small>min</small>', k: "Schlaf", n: "Score " + g.schlafScore },
+    { v: g.bodyBatteryWake, k: "Body Battery", n: "beim Aufwachen", bar: g.bodyBatteryWake },
+    { v: g.hrv + '<small>ms</small>', k: "HRV", n: hrvTxt + " · Ø Woche " + g.hrvWoche, warn: g.hrvStatus !== "BALANCED" },
+    { v: g.ruhepuls + '<small>bpm</small>', k: "Ruhepuls", n: "Ø 7 Tage " + g.ruhepuls7 },
+    { v: fmt(g.wochenSchnitt[3]), k: "Schritte / Tag, Woche", n: (trend >= 0 ? "+" : "") + fmt(trend) + " zur Vorwoche" }
+  ];
+  var html = "";
+  for (var i = 0; i < tiles.length; i++) {
+    var t = tiles[i];
+    html += '<div class="stat"><div class="v">' + t.v + '</div><div class="k">' + t.k +
+      '</div><div class="n' + (t.warn ? " warn" : "") + '">' + t.n + "</div>" +
+      (t.bar !== undefined ? '<div class="bar"><i style="width:' + t.bar + '%"></i></div>' : "") + "</div>";
+  }
+  $("garmin").innerHTML = html;
+  var p = g.stand.split("-");
+  $("stand").textContent = "Stand Garmin: " + parseInt(p[2], 10) + "." + parseInt(p[1], 10) + "." + p[0];
+}
+
+tick(); sky(); garmin(); weather();
+setInterval(tick, 1000);
+setInterval(sky, 10 * 60 * 1000);
+setInterval(shift, 5 * 60 * 1000);
+setInterval(weather, 20 * 60 * 1000);
+/* Seite alle 6 Stunden neu laden, damit neue Garmin-Daten ankommen */
+setTimeout(function () { location.reload(); }, 6 * 60 * 60 * 1000);
+</script>
+</body>
+</html>
