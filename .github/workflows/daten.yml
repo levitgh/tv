@@ -1,0 +1,93 @@
+name: TV-Daten aktualisieren
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # alle 30 Minuten
+  workflow_dispatch:          # manuell über den Actions-Tab startbar
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Nachrichten, Börse und "Heute vor X Jahren" holen
+        run: |
+          cat > /tmp/update.py <<'PY'
+          import json, urllib.request, datetime, csv, io
+
+          UA = {"User-Agent": "levitgh-tv-dashboard/1.0 (github.com/levitgh/tv)"}
+
+          def get(url, raw=False):
+              req = urllib.request.Request(url, headers=UA)
+              with urllib.request.urlopen(req, timeout=20) as r:
+                  data = r.read().decode("utf-8")
+              return data if raw else json.loads(data)
+
+          def news(url, n=4):
+              out = []
+              try:
+                  for it in get(url).get("news", []):
+                      if not it.get("title") or it.get("type") not in (None, "story"):
+                          continue
+                      out.append({
+                          "title": it.get("title", "").strip(),
+                          "topline": (it.get("topline") or "").strip(),
+                          "text": (it.get("firstSentence") or "").strip(),
+                          "date": it.get("date", ""),
+                      })
+                      if len(out) >= n:
+                          break
+              except Exception as e:
+                  print("news error", url, e)
+              return out
+
+          data = {}
+          data["welt"] = news("https://www.tagesschau.de/api2u/news/?ressort=ausland")
+          if not data["welt"]:
+              data["welt"] = news("https://www.tagesschau.de/api2u/homepage/")
+          data["region"] = news("https://www.tagesschau.de/api2u/news/?regions=9")  # 9 = Niedersachsen
+
+          markt = {}
+          try:
+              rows = list(csv.DictReader(io.StringIO(get("https://stooq.com/q/d/l/?s=%5Edax&i=d", raw=True))))
+              rows = [r for r in rows if r.get("Close")]
+              last, prev = float(rows[-1]["Close"]), float(rows[-2]["Close"])
+              markt["dax"] = {"close": last, "change": (last - prev) / prev * 100, "date": rows[-1]["Date"]}
+          except Exception as e:
+              print("dax error", e)
+          for u in ("https://api.frankfurter.dev/v1/latest?base=EUR&symbols=USD",
+                    "https://api.frankfurter.app/latest?from=EUR&to=USD"):
+              try:
+                  markt["eurusd"] = get(u)["rates"]["USD"]
+                  break
+              except Exception as e:
+                  print("fx error", u, e)
+          data["markt"] = markt
+
+          geschichte = []
+          try:
+              t = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=1)))
+              d = get("https://api.wikimedia.org/feed/v1/wikipedia/de/onthisday/selected/%02d/%02d" % (t.month, t.day))
+              for ev in d.get("selected", []):
+                  txt = ev.get("text", "").strip()
+                  if ev.get("year") and txt and len(txt) < 140:
+                      geschichte.append({"year": ev["year"], "text": txt})
+          except Exception as e:
+              print("onthisday error", e)
+          data["geschichte"] = geschichte[:8]
+
+          json.dump(data, open("data.json", "w"), ensure_ascii=False, indent=1)
+          print("welt", len(data["welt"]), "region", len(data["region"]), "markt", list(markt), "geschichte", len(geschichte))
+          PY
+          python3 /tmp/update.py
+
+      - name: Speichern, falls sich etwas geändert hat
+        run: |
+          git config user.name "tv-bot"
+          git config user.email "tv-bot@users.noreply.github.com"
+          git add data.json
+          git diff --cached --quiet || (git commit -m "Daten aktualisiert" && git push)
