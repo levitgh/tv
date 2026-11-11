@@ -7,234 +7,419 @@
 <style>
   html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
   body {
-    background: #0b0d12;
-    color: #e9e6df;
+    background: #090b10; color: #ece9e2;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
-    transition: background 4s ease;
   }
-  #stage {
-    position: absolute; left: 0; top: 0; right: 0; bottom: 0;
-    padding: 5.5vh 5vw;
-    -webkit-transition: -webkit-transform 3s ease; transition: transform 3s ease;
-  }
-  /* Kopf: Uhr links, Wetter jetzt rechts */
-  #top { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; justify-content: space-between; -webkit-box-align: start; -webkit-align-items: flex-start; align-items: flex-start; }
-  #clock { font-size: 17vw; font-weight: 200; line-height: 0.9; letter-spacing: -0.04em; }
-  #clock .sec { font-size: 4vw; color: #6f7480; letter-spacing: 0; margin-left: 1vw; vertical-align: top; position: relative; top: 2.2vw; }
-  #date { font-size: 2.3vw; color: #a9a59c; margin-top: 2.2vh; font-weight: 300; }
-  #greet { font-size: 1.5vw; color: #6f7480; margin-top: 1vh; font-weight: 300; }
+  /* ---------- lebendiger Hintergrund (nur Transform-Animationen, TV-schonend) ---------- */
+  .blob { position: absolute; width: 70vw; height: 70vw; border-radius: 50%; opacity: .55; pointer-events: none; }
+  #b1 { left: -20vw; top: -35vw; background: radial-gradient(circle, rgba(70,90,140,.35) 0%, rgba(70,90,140,0) 65%);
+        -webkit-animation: drift1 70s ease-in-out infinite alternate; animation: drift1 70s ease-in-out infinite alternate; }
+  #b2 { right: -25vw; bottom: -40vw; background: radial-gradient(circle, rgba(150,110,80,.28) 0%, rgba(150,110,80,0) 65%);
+        -webkit-animation: drift2 90s ease-in-out infinite alternate; animation: drift2 90s ease-in-out infinite alternate; }
+  @-webkit-keyframes drift1 { from { -webkit-transform: translate(0,0); } to { -webkit-transform: translate(18vw,10vw); } }
+  @keyframes drift1 { from { transform: translate(0,0); } to { transform: translate(18vw,10vw); } }
+  @-webkit-keyframes drift2 { from { -webkit-transform: translate(0,0); } to { -webkit-transform: translate(-15vw,-8vw); } }
+  @keyframes drift2 { from { transform: translate(0,0); } to { transform: translate(-15vw,-8vw); } }
 
-  #now { text-align: right; padding-top: 1.2vw; }
-  #now .temp { font-size: 7vw; font-weight: 200; line-height: 1; }
-  #now .desc { font-size: 1.9vw; color: #a9a59c; margin-top: 1vh; font-weight: 300; }
-  #now .meta { font-size: 1.25vw; color: #6f7480; margin-top: 1vh; }
-  #now svg { width: 5vw; height: 5vw; vertical-align: middle; margin-right: 1vw; position: relative; top: -0.6vw; }
+  #stage { position: absolute; left: 0; top: 0; right: 0; bottom: 0; padding: 5vh 4.6vw;
+           -webkit-transition: -webkit-transform 3s ease; transition: transform 3s ease; }
 
-  /* Unterer Bereich */
-  #bottom { position: absolute; left: 5vw; right: 5vw; bottom: 6vh; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-align: end; -webkit-align-items: flex-end; align-items: flex-end; }
-  .panel { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; }
-  .panel + .panel { margin-left: 4vw; }
-  .label { font-size: 1.05vw; letter-spacing: 0.18em; text-transform: uppercase; color: #6f7480; margin-bottom: 2vh; }
+  /* ---------- Einblenden beim Start ---------- */
+  .rise { opacity: 0; -webkit-animation: rise 1.2s ease-out forwards; animation: rise 1.2s ease-out forwards; }
+  @-webkit-keyframes rise { from { opacity: 0; -webkit-transform: translateY(2vh); } to { opacity: 1; -webkit-transform: translateY(0); } }
+  @keyframes rise { from { opacity: 0; transform: translateY(2vh); } to { opacity: 1; transform: translateY(0); } }
+  .d1 { -webkit-animation-delay: .1s; animation-delay: .1s; } .d2 { -webkit-animation-delay: .35s; animation-delay: .35s; }
+  .d3 { -webkit-animation-delay: .6s; animation-delay: .6s; } .d4 { -webkit-animation-delay: .85s; animation-delay: .85s; }
+  .d5 { -webkit-animation-delay: 1.1s; animation-delay: 1.1s; }
+
+  .fade { -webkit-transition: opacity .9s ease, -webkit-transform .9s ease; transition: opacity .9s ease, transform .9s ease; }
+  .out { opacity: 0; -webkit-transform: translateY(1vh); transform: translateY(1vh); }
+
+  /* ---------- Kopfzeile ---------- */
+  .row { display: -webkit-box; display: -webkit-flex; display: flex; }
+  .between { -webkit-box-pack: justify; -webkit-justify-content: space-between; justify-content: space-between; }
+  #clock { font-size: 15.5vw; font-weight: 300; line-height: .88; letter-spacing: -.04em; white-space: nowrap; }
+  #clock .m { display: inline-block; }
+  #clock .tick { -webkit-animation: tick .7s ease-out; animation: tick .7s ease-out; }
+  @-webkit-keyframes tick { from { opacity: 0; -webkit-transform: translateY(-3vw); } to { opacity: 1; -webkit-transform: translateY(0); } }
+  @keyframes tick { from { opacity: 0; transform: translateY(-3vw); } to { opacity: 1; transform: translateY(0); } }
+  #clock .sec { font-size: 3.4vw; color: #6c717d; letter-spacing: 0; margin-left: .8vw; vertical-align: top; position: relative; top: 1.8vw; }
+  #date { font-size: 2.2vw; color: #b3afa6; margin-top: 2vh; font-weight: 300; }
+  #sub { font-size: 1.25vw; color: #6c717d; margin-top: 1.2vh; }
+  #yearbar { width: 22vw; height: .45vh; background: #20242d; margin-top: 1.2vh; }
+  #yearbar i { display: block; height: 100%; width: 0; background: #c9b98f; -webkit-transition: width 2.5s ease; transition: width 2.5s ease; }
+
+  #wx { text-align: right; width: 34vw; }
+  #wxNow { font-size: 6.4vw; font-weight: 300; line-height: 1; white-space: nowrap; }
+  #wxNow svg { width: 4.6vw; height: 4.6vw; vertical-align: middle; margin-right: .8vw; position: relative; top: -.5vw; }
+  #wxDesc { font-size: 1.8vw; color: #b3afa6; margin-top: .8vh; font-weight: 300; }
+  #wxMeta { font-size: 1.1vw; color: #6c717d; margin-top: .8vh; }
+  #spark { margin-top: 2vh; width: 34vw; height: 7.65vw; display: block; margin-left: auto; }
+  #spark .line { fill: none; stroke: #c9b98f; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+  #spark .area { fill: rgba(201,185,143,.08); }
+  #spark text { fill: #6c717d; font-size: 11px; }
+  #spark .lbl { fill: #b3afa6; font-size: 12px; }
+  .draw { -webkit-animation: draw 2.4s ease-out forwards; animation: draw 2.4s ease-out forwards; }
+  @-webkit-keyframes draw { to { stroke-dashoffset: 0; } } @keyframes draw { to { stroke-dashoffset: 0; } }
+
+  /* ---------- untere Spalten ---------- */
+  #bottom { position: absolute; left: 4.6vw; right: 4.6vw; bottom: 9.5vh; }
+  .col { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; min-width: 0; }
+  .col + .col { margin-left: 3.2vw; }
+  .label { font-size: .95vw; letter-spacing: .2em; text-transform: uppercase; color: #6c717d; margin-bottom: 1.6vh; }
+  .label b { color: #c9b98f; font-weight: 400; }
+  .rule { border-top: 2px solid #252933; padding-top: 1.6vh; }
 
   /* Vorhersage */
-  #forecast { display: -webkit-box; display: -webkit-flex; display: flex; }
-  .day { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; border-top: 1px solid #262a33; padding-top: 1.6vh; }
-  .day + .day { margin-left: 1.6vw; }
-  .day .d { font-size: 1.3vw; color: #a9a59c; }
-  .day svg { width: 2.8vw; height: 2.8vw; margin: 1.2vh 0; }
-  .day .t { font-size: 1.6vw; font-weight: 300; }
-  .day .t span { color: #6f7480; margin-left: 0.6vw; }
-  .day .r { font-size: 1vw; color: #6f8fb3; margin-top: 0.6vh; }
+  .day { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; }
+  .day + .day { margin-left: 1.2vw; }
+  .day .d { font-size: 1.15vw; color: #b3afa6; }
+  .day svg { width: 2.5vw; height: 2.5vw; margin: 1vh 0; }
+  .day .t { font-size: 1.5vw; font-weight: 300; }
+  .day .t span { color: #6c717d; margin-left: .5vw; }
+  .day .r { font-size: .9vw; color: #7f9cbf; margin-top: .5vh; }
+  #sun { margin-top: 2.2vh; }
+  #sun svg { width: 100%; height: 5.4vw; display: block; }
+
+  /* Nachrichten */
+  .news + .news { margin-top: 2.4vh; }
+  .news .k { font-size: .9vw; color: #c9b98f; letter-spacing: .12em; text-transform: uppercase; }
+  .news .h { font-size: 1.55vw; line-height: 1.3; margin-top: .6vh; font-weight: 400; }
+  .news .s { font-size: 1vw; line-height: 1.4; color: #8d909a; margin-top: .6vh; max-height: 2.8em; overflow: hidden; }
+  .news .w { font-size: .85vw; color: #565b66; margin-top: .6vh; }
+  .dots { margin-top: 1.4vh; }
+  .dots i { display: inline-block; width: .5vw; height: .5vw; border-radius: 50%; background: #2d313b; margin-right: .5vw; -webkit-transition: background .6s; transition: background .6s; }
+  .dots i.on { background: #c9b98f; }
 
   /* Garmin */
-  #garmin { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
-  .stat { width: 33.33%; border-top: 1px solid #262a33; padding: 1.6vh 1vw 2vh 0; box-sizing: border-box; }
-  .stat .v { font-size: 2.6vw; font-weight: 200; line-height: 1.05; }
-  .stat .v small { font-size: 1.1vw; color: #6f7480; margin-left: 0.3vw; font-weight: 400; }
-  .stat .k { font-size: 1vw; color: #a9a59c; margin-top: 0.6vh; }
-  .stat .n { font-size: 0.9vw; color: #6f7480; margin-top: 0.3vh; }
-  .bar { height: 0.35vh; background: #262a33; margin-top: 1vh; width: 85%; }
-  .bar i { display: block; height: 100%; background: #c9b98f; }
-  .warn { color: #d9a46a !important; }
-  #stand { font-size: 0.85vw; color: #4a4f59; margin-top: 1.2vh; }
+  #garmin { -webkit-flex-wrap: wrap; flex-wrap: wrap; }
+  .stat { width: 33.33%; padding: 0 .8vw 2.2vh 0; box-sizing: border-box; }
+  .stat .v { font-size: 2.3vw; font-weight: 300; line-height: 1.05; white-space: nowrap; }
+  .stat .v small { font-size: 1vw; color: #6c717d; margin-left: .25vw; }
+  .stat .k { font-size: .95vw; color: #b3afa6; margin-top: .5vh; }
+  .stat .n { font-size: .82vw; color: #6c717d; margin-top: .3vh; white-space: nowrap; overflow: hidden; }
+  .bar { height: .4vh; background: #252933; margin-top: .9vh; width: 85%; }
+  .bar i { display: block; height: 100%; width: 0; background: #c9b98f; -webkit-transition: width 2.2s cubic-bezier(.2,.8,.2,1); transition: width 2.2s cubic-bezier(.2,.8,.2,1); }
+  .warn { color: #dba46d !important; }
+
+  /* Fußzeile */
+  #foot { position: absolute; left: 4.6vw; right: 4.6vw; bottom: 3.6vh; border-top: 2px solid #1c2028; padding-top: 1.6vh;
+          font-size: 1.15vw; color: #8d909a; white-space: nowrap; overflow: hidden; }
+  #foot b { color: #c9b98f; font-weight: 400; letter-spacing: .14em; font-size: .85vw; text-transform: uppercase; margin-right: 1.2vw; }
+  #foot .up { color: #8fbf9a; } #foot .dn { color: #d98a7a; }
+  #stand { position: absolute; right: 0; top: 1.9vh; font-size: .75vw; color: #464b55; }
 </style>
 </head>
 <body>
+<div class="blob" id="b1"></div><div class="blob" id="b2"></div>
 <div id="stage">
-  <div id="top">
-    <div>
-      <div id="clock">--:--</div>
+  <div class="row between">
+    <div class="rise d1">
+      <div id="clock"></div>
       <div id="date"></div>
-      <div id="greet"></div>
+      <div id="sub"></div>
+      <div id="yearbar"><i></i></div>
     </div>
-    <div id="now">
-      <div class="temp" id="nowTemp">–</div>
-      <div class="desc" id="nowDesc">Wetter wird geladen …</div>
-      <div class="meta" id="nowMeta"></div>
+    <div id="wx" class="rise d2">
+      <div id="wxNow">–</div>
+      <div id="wxDesc">Wetter wird geladen …</div>
+      <div id="wxMeta"></div>
+      <svg id="spark" viewBox="0 0 400 90"></svg>
     </div>
   </div>
 
-  <div id="bottom">
-    <div class="panel">
-      <div class="label">Braunschweig · nächste Tage</div>
-      <div id="forecast"></div>
+  <div id="bottom" class="row">
+    <div class="col rise d3">
+      <div class="label">Braunschweig · <b>4 Tage</b></div>
+      <div class="rule row" id="forecast"></div>
+      <div id="sun"></div>
     </div>
-    <div class="panel">
-      <div class="label">Garmin · gestern &amp; letzte Nacht</div>
-      <div id="garmin"></div>
-      <div id="stand"></div>
+    <div class="col rise d4" style="-webkit-box-flex:1.25;-webkit-flex:1.25;flex:1.25">
+      <div class="label">Nachrichten</div>
+      <div class="rule" id="news"><div class="news"><div class="s">Nachrichten werden geladen …</div></div></div>
+      <div class="dots" id="dots"></div>
+    </div>
+    <div class="col rise d5">
+      <div class="label">Garmin · <b>gestern</b></div>
+      <div class="rule row" id="garmin"></div>
     </div>
   </div>
+
+  <div id="foot" class="rise d5"><span id="tickerTxt" class="fade"></span><span id="stand"></span></div>
 </div>
 
 <script>
-/* ======= GARMIN-DATEN (werden beim Aktualisieren ersetzt) ======= */
+/* ======= GARMIN-DATEN (Stand eintragen beim Aktualisieren) ======= */
 var GARMIN = {
   stand: "2026-11-10",
   schritte: 8618, schritteZiel: 7500,
-  schlafMin: 438,            /* 00:05 – 07:23 */
-  schlafScore: 71,
+  schlafMin: 438, schlafScore: 71,
   bodyBatteryWake: 42,
   hrv: 34, hrvWoche: 41, hrvStatus: "UNBALANCED",
   ruhepuls: 59, ruhepuls7: 55,
   bereitschaft: 30,
-  wochenSchnitt: [7188, 11122, 11577, 12856]  /* letzte 4 Wochen, älteste zuerst */
+  wochenSchnitt: [7188, 11122, 11577, 12856]
 };
-/* ================================================================ */
+/* ================================================================== */
 
 var LAT = 52.2689, LON = 10.5268;
 var TAGE = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
 var TAGE_K = ["So","Mo","Di","Mi","Do","Fr","Sa"];
 var MONATE = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
 
+function $(id) { return document.getElementById(id); }
 function pad(n) { return n < 10 ? "0" + n : "" + n; }
 function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
-function $(id) { return document.getElementById(id); }
+function dec(n, d) { return n.toFixed(d).replace(".", ","); }
+function esc(s) { return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+function get(url, ok, fail) {
+  var x = new XMLHttpRequest();
+  try { x.open("GET", url, true); } catch (e) { if (fail) fail(); return; }
+  x.timeout = 15000;
+  x.onload = function () { if (x.status >= 200 && x.status < 300) { try { ok(JSON.parse(x.responseText)); } catch (e) { if (fail) fail(); } } else if (fail) fail(); };
+  x.onerror = x.ontimeout = function () { if (fail) fail(); };
+  x.send();
+}
+/* Text tauschen mit sanfter Blende */
+function swap(el, html) {
+  el.className = el.className.replace(" out", "") + " out";
+  setTimeout(function () { el.innerHTML = html; el.className = el.className.replace(" out", ""); }, 900);
+}
 
-/* ---- Uhr ---- */
+/* ---------------- Uhr & Kalender ---------------- */
+var lastMin = -1, YEARW = "0", YEARSET = false;
+function kw(d) {
+  var t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  var day = t.getUTCDay() || 7; t.setUTCDate(t.getUTCDate() + 4 - day);
+  var y0 = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));
+  return Math.ceil(((t - y0) / 86400000 + 1) / 7);
+}
 function tick() {
-  var d = new Date();
-  $("clock").innerHTML = pad(d.getHours()) + ":" + pad(d.getMinutes()) + '<span class="sec">' + pad(d.getSeconds()) + "</span>";
-  $("date").textContent = TAGE[d.getDay()] + ", " + d.getDate() + ". " + MONATE[d.getMonth()];
-  var h = d.getHours();
-  $("greet").textContent = h < 5 ? "Gute Nacht" : h < 11 ? "Guten Morgen" : h < 17 ? "Guten Tag" : h < 22 ? "Guten Abend" : "Gute Nacht";
+  var d = new Date(), m = d.getMinutes();
+  if (m !== lastMin) {
+    $("clock").innerHTML = pad(d.getHours()) + ':<span class="m' + (lastMin < 0 ? "" : " tick") + '">' + pad(m) + '</span><span class="sec" id="sec"></span>';
+    lastMin = m;
+    $("date").textContent = TAGE[d.getDay()] + ", " + d.getDate() + ". " + MONATE[d.getMonth()];
+    var start = new Date(d.getFullYear(), 0, 1), end = new Date(d.getFullYear() + 1, 0, 1);
+    var doy = Math.floor((d - start) / 86400000) + 1, len = Math.round((end - start) / 86400000);
+    var h = d.getHours();
+    var gr = h < 5 ? "Gute Nacht" : h < 11 ? "Guten Morgen" : h < 17 ? "Guten Tag" : h < 22 ? "Guten Abend" : "Gute Nacht";
+    $("sub").textContent = gr + "  ·  KW " + kw(d) + "  ·  Tag " + doy + " von " + len;
+    YEARW = (doy / len * 100).toFixed(1) + "%"; if (lastMin !== m || YEARSET) { $("yearbar").firstChild.style.width = YEARSET ? YEARW : "0"; }
+  }
+  $("sec").textContent = pad(d.getSeconds());
 }
 
-/* Hintergrund passend zur Tageszeit */
-function sky() {
-  var h = new Date().getHours();
-  var bg = h < 6 ? "#07080c" : h < 9 ? "#14131a" : h < 17 ? "#10141b" : h < 21 ? "#15111a" : "#0a0b10";
-  document.body.style.background = bg;
-}
-
-/* Kleines Verschieben gegen Einbrennen */
+/* Anti-Einbrennen: alle 5 Min. ein paar Pixel verschieben */
 var drift = 0;
 function shift() {
   drift = (drift + 1) % 4;
-  var o = [[0,0],[6,4],[0,8],[-6,4]][drift];
-  var t = "translate(" + o[0] + "px," + o[1] + "px)";
+  var o = [[0,0],[6,4],[0,8],[-6,4]][drift], t = "translate(" + o[0] + "px," + o[1] + "px)";
   $("stage").style.webkitTransform = t; $("stage").style.transform = t;
 }
 
-/* ---- Wetter-Icons (inline SVG, keine Emojis) ---- */
+/* ---------------- Wetter ---------------- */
 function icon(code, night) {
-  var s = 'stroke="#e9e6df" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"';
-  var sun = night
-    ? '<path d="M15 4a7 7 0 1 0 5 12 6 6 0 0 1-5-12z" ' + s + '/>'
+  var s = 'stroke="#ece9e2" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"';
+  var sun = night ? '<path d="M15 4a7 7 0 1 0 5 12 6 6 0 0 1-5-12z" ' + s + '/>'
     : '<circle cx="12" cy="12" r="4.2" ' + s + '/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" ' + s + '/>';
   var cloud = '<path d="M7 18h10a4 4 0 0 0 .6-7.95A5.5 5.5 0 0 0 7.1 11 3.5 3.5 0 0 0 7 18z" ' + s + '/>';
-  var body;
-  if (code === 0) body = sun;
-  else if (code <= 2) body = '<g transform="translate(-3,-4) scale(.7)">' + sun + '</g><g transform="translate(2,2) scale(.85)">' + cloud + '</g>';
-  else if (code === 3 || code === 45 || code === 48) body = cloud + (code >= 45 ? '<path d="M5 21h14" ' + s + '/>' : '');
-  else if ((code >= 71 && code <= 77) || code === 85 || code === 86) body = '<g transform="translate(0,-3)">' + cloud + '</g><path d="M8 20h.01M12 21h.01M16 20h.01" stroke="#e9e6df" stroke-width="2.4" stroke-linecap="round"/>';
-  else if (code >= 95) body = '<g transform="translate(0,-3)">' + cloud + '</g><path d="M13 16l-2 4h3l-2 4" ' + s + '/>';
-  else body = '<g transform="translate(0,-3)">' + cloud + '</g><path d="M8 18l-1 3M12 18l-1 3M16 18l-1 3" stroke="#6f8fb3" stroke-width="1.6" stroke-linecap="round"/>';
-  return '<svg viewBox="0 0 24 24">' + body + '</svg>';
+  var b;
+  if (code === 0) b = sun;
+  else if (code <= 2) b = '<g transform="translate(-3,-4) scale(.7)">' + sun + '</g><g transform="translate(2,2) scale(.85)">' + cloud + '</g>';
+  else if (code === 3 || code === 45 || code === 48) b = cloud + (code >= 45 ? '<path d="M5 21h14" ' + s + '/>' : '');
+  else if ((code >= 71 && code <= 77) || code === 85 || code === 86) b = '<g transform="translate(0,-3)">' + cloud + '</g><path d="M8 20h.01M12 21h.01M16 20h.01" stroke="#ece9e2" stroke-width="2.4" stroke-linecap="round"/>';
+  else if (code >= 95) b = '<g transform="translate(0,-3)">' + cloud + '</g><path d="M13 16l-2 4h3l-2 4" ' + s + '/>';
+  else b = '<g transform="translate(0,-3)">' + cloud + '</g><path d="M8 18l-1 3M12 18l-1 3M16 18l-1 3" stroke="#7f9cbf" stroke-width="1.6" stroke-linecap="round"/>';
+  return '<svg viewBox="0 0 24 24">' + b + '</svg>';
 }
 function wtext(c) {
-  if (c === 0) return "Klar";
-  if (c === 1) return "Überwiegend klar";
-  if (c === 2) return "Teils bewölkt";
-  if (c === 3) return "Bedeckt";
-  if (c === 45 || c === 48) return "Nebel";
-  if (c >= 51 && c <= 57) return "Nieselregen";
-  if (c >= 61 && c <= 67) return "Regen";
-  if (c >= 71 && c <= 77) return "Schnee";
-  if (c >= 80 && c <= 82) return "Regenschauer";
-  if (c === 85 || c === 86) return "Schneeschauer";
-  if (c >= 95) return "Gewitter";
-  return "";
+  if (c === 0) return "Klar"; if (c === 1) return "Überwiegend klar"; if (c === 2) return "Teils bewölkt";
+  if (c === 3) return "Bedeckt"; if (c === 45 || c === 48) return "Nebel"; if (c >= 51 && c <= 57) return "Nieselregen";
+  if (c >= 61 && c <= 67) return "Regen"; if (c >= 71 && c <= 77) return "Schnee"; if (c >= 80 && c <= 82) return "Regenschauer";
+  if (c === 85 || c === 86) return "Schneeschauer"; if (c >= 95) return "Gewitter"; return "";
 }
-
-/* ---- Wetter laden (Open-Meteo, kostenlos, ohne Schlüssel) ---- */
+var WX = null, AQ = null;
 function weather() {
-  var url = "https://api.open-meteo.com/v1/forecast?latitude=" + LAT + "&longitude=" + LON +
+  get("https://api.open-meteo.com/v1/forecast?latitude=" + LAT + "&longitude=" + LON +
     "&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,relative_humidity_2m,is_day" +
-    "&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset" +
-    "&timezone=Europe%2FBerlin&forecast_days=4";
-  var x = new XMLHttpRequest();
-  x.open("GET", url, true);
-  x.timeout = 15000;
-  x.onload = function () {
-    try {
-      var w = JSON.parse(x.responseText), c = w.current, d = w.daily;
-      $("nowTemp").innerHTML = icon(c.weather_code, !c.is_day) + Math.round(c.temperature_2m) + "°";
-      $("nowDesc").textContent = wtext(c.weather_code) + " · gefühlt " + Math.round(c.apparent_temperature) + "°";
-      var sr = d.sunrise[0].slice(11, 16), ss = d.sunset[0].slice(11, 16);
-      $("nowMeta").textContent = "Wind " + Math.round(c.wind_speed_10m) + " km/h · Feuchte " + c.relative_humidity_2m + " % · ↑ " + sr + "  ↓ " + ss;
+    "&hourly=temperature_2m,precipitation_probability&forecast_hours=13" +
+    "&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset,uv_index_max" +
+    "&timezone=Europe%2FBerlin&forecast_days=4", function (w) {
+      WX = w; var c = w.current, d = w.daily;
+      $("wxNow").innerHTML = icon(c.weather_code, !c.is_day) + Math.round(c.temperature_2m) + "°";
+      $("wxDesc").textContent = wtext(c.weather_code) + " · gefühlt " + Math.round(c.apparent_temperature) + "°";
+      $("wxMeta").textContent = "Wind " + Math.round(c.wind_speed_10m) + " km/h  ·  Feuchte " + c.relative_humidity_2m + " %" +
+        (AQ ? "  ·  Luft " + AQ : "");
       var html = "";
       for (var i = 0; i < 4; i++) {
         var dt = new Date(d.time[i] + "T12:00:00");
-        var name = i === 0 ? "Heute" : i === 1 ? "Morgen" : TAGE_K[dt.getDay()];
-        html += '<div class="day"><div class="d">' + name + "</div>" + icon(d.weather_code[i], false) +
-          '<div class="t">' + Math.round(d.temperature_2m_max[i]) + "°<span>" + Math.round(d.temperature_2m_min[i]) + "°</span></div>" +
-          '<div class="r">' + (d.precipitation_probability_max[i] || 0) + " % Regen</div></div>";
+        html += '<div class="day"><div class="d">' + (i === 0 ? "Heute" : i === 1 ? "Morgen" : TAGE_K[dt.getDay()]) + "</div>" +
+          icon(d.weather_code[i], false) + '<div class="t">' + Math.round(d.temperature_2m_max[i]) + "°<span>" +
+          Math.round(d.temperature_2m_min[i]) + "°</span></div>" + '<div class="r">' + (d.precipitation_probability_max[i] || 0) + " % Regen</div></div>";
       }
       $("forecast").innerHTML = html;
-    } catch (e) { fail(); }
-  };
-  x.onerror = x.ontimeout = fail;
-  x.send();
+      spark(w.hourly); sunArc();
+    }, function () { if (!WX) $("wxDesc").textContent = "Wetter gerade nicht erreichbar"; });
+  get("https://air-quality-api.open-meteo.com/v1/air-quality?latitude=" + LAT + "&longitude=" + LON + "&current=european_aqi", function (a) {
+    var v = a.current && a.current.european_aqi; if (v == null) return;
+    AQ = v <= 20 ? "sehr gut" : v <= 40 ? "gut" : v <= 60 ? "mäßig" : v <= 80 ? "schlecht" : "sehr schlecht";
+    if (WX && $("wxMeta").textContent.indexOf("Luft") < 0) $("wxMeta").textContent += "  ·  Luft " + AQ;
+  });
 }
-function fail() {
-  if ($("nowTemp").textContent === "–") $("nowDesc").textContent = "Wetter gerade nicht erreichbar";
+/* Temperaturkurve der nächsten 12 Stunden, wird animiert gezeichnet */
+function spark(h) {
+  if (!h || !h.temperature_2m) return;
+  var t = h.temperature_2m, n = t.length, mn = Math.min.apply(null, t), mx = Math.max.apply(null, t);
+  if (mx - mn < 2) { mx += 1; mn -= 1; }
+  var W = 400, top = 18, bot = 70, pts = [], i;
+  for (i = 0; i < n; i++) pts.push([i / (n - 1) * (W - 56) + 28, bot - (t[i] - mn) / (mx - mn) * (bot - top)]);
+  var p = "M" + pts[0][0].toFixed(1) + " " + pts[0][1].toFixed(1);
+  for (i = 1; i < n; i++) {
+    var cx = (pts[i - 1][0] + pts[i][0]) / 2;
+    p += " C" + cx.toFixed(1) + " " + pts[i - 1][1].toFixed(1) + " " + cx.toFixed(1) + " " + pts[i][1].toFixed(1) + " " + pts[i][0].toFixed(1) + " " + pts[i][1].toFixed(1);
+  }
+  var svg = '<path class="area" d="' + p + " L" + pts[n - 1][0] + " 74 L" + pts[0][0] + ' 74 Z"/>' +
+    '<path class="line draw" d="' + p + '" style="stroke-dasharray:900;stroke-dashoffset:900"/>';
+  for (i = 0; i < n; i += 3) {
+    var hr = h.time[i].slice(11, 13);
+    svg += '<text x="' + pts[i][0] + '" y="88" text-anchor="middle">' + (i === 0 ? "jetzt" : hr + " Uhr") + "</text>" +
+      '<text class="lbl" x="' + pts[i][0] + '" y="' + (pts[i][1] - 6).toFixed(1) + '" text-anchor="middle">' + Math.round(t[i]) + "°</text>";
+  }
+  $("spark").innerHTML = svg;
+}
+/* Sonnenbogen: wo steht die Sonne gerade? */
+function sunArc() {
+  if (!WX) return;
+  var d = WX.daily, now = new Date();
+  var sr = new Date(d.sunrise[0]), ss = new Date(d.sunset[0]);
+  var f = (now - sr) / (ss - sr), up = f >= 0 && f <= 1; f = Math.max(0, Math.min(1, f));
+  var x = 20 + f * 360, y = 62 - Math.sin(f * Math.PI) * 48;
+  var len = Math.round((ss - sr) / 60000);
+  var svg = '<svg viewBox="0 0 400 80">' +
+    '<path d="M20 62 Q200 -34 380 62" fill="none" stroke="#2d313b" stroke-width="2" stroke-dasharray="4 6"/>' +
+    '<line x1="0" y1="62" x2="400" y2="62" stroke="#252933" stroke-width="2"/>' +
+    '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="' + (up ? 7 : 5) + '" fill="' + (up ? "#e8c77a" : "#3a3f4a") + '"/>' +
+    '<text x="20" y="78" fill="#6c717d" font-size="12">↑ ' + d.sunrise[0].slice(11, 16) + '</text>' +
+    '<text x="380" y="78" fill="#6c717d" font-size="12" text-anchor="end">↓ ' + d.sunset[0].slice(11, 16) + '</text>' +
+    '<text x="200" y="78" fill="#6c717d" font-size="12" text-anchor="middle">' + Math.floor(len / 60) + " h " + pad(len % 60) + " min Tageslicht</text></svg>";
+  $("sun").innerHTML = svg;
 }
 
-/* ---- Garmin-Kacheln ---- */
+/* ---------------- Mond (berechnet, kein Internet nötig) ---------------- */
+function moon() {
+  var syn = 29.530588853, ref = Date.UTC(2000, 0, 6, 18, 14);
+  var age = ((Date.now() - ref) / 86400000) % syn; if (age < 0) age += syn;
+  var illum = Math.round((1 - Math.cos(age / syn * 2 * Math.PI)) / 2 * 100);
+  var name = age < 1.5 ? "Neumond" : age < 7 ? "zunehmende Sichel" : age < 8.5 ? "erstes Viertel" : age < 14 ? "zunehmender Mond" :
+    age < 16 ? "Vollmond" : age < 22 ? "abnehmender Mond" : age < 23.5 ? "letztes Viertel" : age < 28 ? "abnehmende Sichel" : "Neumond";
+  var toFull = (14.77 - age + syn) % syn;
+  return "Mond: " + name + ", " + illum + " % beleuchtet · Vollmond in " + Math.round(toFull) + " Tagen";
+}
+
+/* ---------------- Nachrichten & Extras (data.json aus der GitHub-Action) ---------------- */
+var DATA = null, nIdx = 0;
+function loadData() {
+  get("data.json?t=" + Date.now(), function (d) { DATA = d; renderNews(true); buildTicker(); }, function () {
+    if (!DATA) $("news").innerHTML = '<div class="news"><div class="s">Noch keine Nachrichten – die Automatik in GitHub läuft gleich zum ersten Mal.</div></div>';
+  });
+}
+function ago(iso) {
+  var m = Math.round((Date.now() - new Date(iso)) / 60000);
+  if (isNaN(m)) return ""; if (m < 60) return "vor " + Math.max(1, m) + " Min."; if (m < 1440) return "vor " + Math.round(m / 60) + " Std."; return "vor " + Math.round(m / 1440) + " Tagen";
+}
+function newsItem(label, it) {
+  if (!it) return "";
+  return '<div class="news"><div class="k">' + esc(label) + (it.topline ? " · " + esc(it.topline) : "") + '</div><div class="h">' + esc(it.title) +
+    '</div>' + (it.text ? '<div class="s">' + esc(it.text) + "</div>" : "") + '<div class="w">' + ago(it.date) + "</div></div>";
+}
+function renderNews(first) {
+  if (!DATA) return;
+  var w = DATA.welt || [], r = DATA.region || [], n = Math.max(w.length, r.length, 1);
+  var html = newsItem("Welt", w[nIdx % (w.length || 1)]) + newsItem("Niedersachsen", r[nIdx % (r.length || 1)]);
+  if (first) $("news").innerHTML = html; else swap($("news"), html);
+  var dots = ""; for (var i = 0; i < Math.min(n, 4); i++) dots += '<i class="' + (i === nIdx % Math.min(n, 4) ? "on" : "") + '"></i>';
+  $("dots").innerHTML = dots;
+}
+function nextNews() { nIdx++; renderNews(false); }
+
+/* Fußzeile: wechselnde Infos */
+var TICK = [], tIdx = 0;
+function buildTicker() {
+  var t = [], d = new Date();
+  if (DATA && DATA.markt) {
+    var m = DATA.markt;
+    if (m.dax) t.push("<b>Börse</b>DAX " + fmt(Math.round(m.dax.close)) + '  <span class="' + (m.dax.change >= 0 ? "up" : "dn") + '">' +
+      (m.dax.change >= 0 ? "▲ +" : "▼ ") + dec(m.dax.change, 2) + " %</span>" + (m.eurusd ? "   ·   1 € = " + dec(m.eurusd, 4) + " $" : ""));
+    else if (m.eurusd) t.push("<b>Devisen</b>1 € = " + dec(m.eurusd, 4) + " US-Dollar");
+  }
+  if (DATA && DATA.geschichte && DATA.geschichte.length) {
+    var g = DATA.geschichte[Math.floor(Math.random() * DATA.geschichte.length)];
+    t.push("<b>Heute vor " + (d.getFullYear() - g.year) + " Jahren</b>" + esc(g.text));
+  }
+  t.push("<b>Himmel</b>" + moon());
+  var x = new Date(d.getFullYear(), 11, 24), dd = Math.ceil((x - d) / 86400000);
+  if (dd > 0 && dd < 60) t.push("<b>Countdown</b>Noch " + dd + " Tage bis Heiligabend");
+  var fr = (5 - d.getDay() + 7) % 7;
+  t.push("<b>Woche</b>" + (d.getDay() === 6 || d.getDay() === 0 ? "Wochenende – genieß es" : fr === 0 ? "Freitag – fast geschafft" : "Noch " + fr + (fr === 1 ? " Tag" : " Tage") + " bis Freitag"));
+  TICK = t; if (tIdx === 0) nextTick(true);
+}
+function nextTick(first) {
+  if (!TICK.length) return;
+  var html = TICK[tIdx % TICK.length]; tIdx++;
+  if (first) $("tickerTxt").innerHTML = html; else swap($("tickerTxt"), html);
+}
+
+/* ---------------- Garmin ---------------- */
+function countUp(el, to, ms) {
+  var t0 = Date.now();
+  (function step() {
+    var f = Math.min(1, (Date.now() - t0) / ms), e = 1 - Math.pow(1 - f, 3);
+    el.textContent = fmt(Math.round(to * e));
+    if (f < 1) setTimeout(step, 30);
+  })();
+}
 function garmin() {
-  var g = GARMIN;
-  var h = Math.floor(g.schlafMin / 60), m = g.schlafMin % 60;
+  var g = GARMIN, h = Math.floor(g.schlafMin / 60), m = g.schlafMin % 60;
   var pct = Math.min(100, Math.round(g.schritte / g.schritteZiel * 100));
   var trend = g.wochenSchnitt[3] - g.wochenSchnitt[2];
   var hrvTxt = { BALANCED: "ausgeglichen", UNBALANCED: "unausgeglichen", LOW: "niedrig", POOR: "schlecht" }[g.hrvStatus] || "";
   var tiles = [
-    { v: fmt(g.schritte), k: "Schritte", n: pct >= 100 ? "Ziel erreicht ✓" : pct + " % vom Ziel", bar: pct },
-    { v: h + '<small>h</small> ' + pad(m) + '<small>min</small>', k: "Schlaf", n: "Score " + g.schlafScore },
-    { v: g.bodyBatteryWake, k: "Body Battery", n: "beim Aufwachen", bar: g.bodyBatteryWake },
-    { v: g.hrv + '<small>ms</small>', k: "HRV", n: hrvTxt + " · Ø Woche " + g.hrvWoche, warn: g.hrvStatus !== "BALANCED" },
-    { v: g.ruhepuls + '<small>bpm</small>', k: "Ruhepuls", n: "Ø 7 Tage " + g.ruhepuls7 },
-    { v: fmt(g.wochenSchnitt[3]), k: "Schritte / Tag, Woche", n: (trend >= 0 ? "+" : "") + fmt(trend) + " zur Vorwoche" }
+    { c: g.schritte, k: "Schritte", n: pct >= 100 ? "Ziel erreicht ✓" : pct + " % vom Ziel", bar: pct },
+    { v: h + "<small>h</small> " + pad(m) + "<small>m</small>", k: "Schlaf", n: "Score " + g.schlafScore, bar: g.schlafScore },
+    { c: g.bodyBatteryWake, k: "Body Battery", n: "beim Aufwachen", bar: g.bodyBatteryWake },
+    { c: g.hrv, u: "ms", k: "HRV", n: hrvTxt, k2: " · Ø " + g.hrvWoche, warn: g.hrvStatus !== "BALANCED" },
+    { c: g.ruhepuls, u: "bpm", k: "Ruhepuls", n: "Ø 7 Tage " + g.ruhepuls7 },
+    { c: g.bereitschaft, k: "Bereitschaft", n: g.bereitschaft < 40 ? "locker angehen" : g.bereitschaft < 70 ? "moderat" : "bereit für mehr", warn: g.bereitschaft < 40, bar: g.bereitschaft }
   ];
   var html = "";
   for (var i = 0; i < tiles.length; i++) {
     var t = tiles[i];
-    html += '<div class="stat"><div class="v">' + t.v + '</div><div class="k">' + t.k +
-      '</div><div class="n' + (t.warn ? " warn" : "") + '">' + t.n + "</div>" +
-      (t.bar !== undefined ? '<div class="bar"><i style="width:' + t.bar + '%"></i></div>' : "") + "</div>";
+    html += '<div class="stat"><div class="v">' + (t.c !== undefined ? '<span id="gc' + i + '">0</span>' + (t.u ? "<small>" + t.u + "</small>" : "") : t.v) +
+      '</div><div class="k">' + t.k + (t.k2 || "") + '</div><div class="n' + (t.warn ? " warn" : "") + '">' + t.n + "</div>" +
+      (t.bar !== undefined ? '<div class="bar"><i data-w="' + t.bar + '"></i></div>' : "") + "</div>";
   }
   $("garmin").innerHTML = html;
+  setTimeout(function () {
+    for (var i = 0; i < tiles.length; i++) if (tiles[i].c !== undefined) countUp($("gc" + i), tiles[i].c, 1800);
+    var bars = $("garmin").getElementsByTagName("i");
+    for (var j = 0; j < bars.length; j++) bars[j].style.width = bars[j].getAttribute("data-w") + "%";
+  }, 1300);
   var p = g.stand.split("-");
-  $("stand").textContent = "Stand Garmin: " + parseInt(p[2], 10) + "." + parseInt(p[1], 10) + "." + p[0];
+  $("stand").textContent = "Garmin " + parseInt(p[2], 10) + "." + parseInt(p[1], 10) + ".";
 }
 
-tick(); sky(); garmin(); weather();
+/* ---------------- Start ---------------- */
+tick(); garmin(); weather(); loadData(); buildTicker();
+setTimeout(function () { YEARSET = true; $("yearbar").firstChild.style.width = YEARW; }, 900);
 setInterval(tick, 1000);
-setInterval(sky, 10 * 60 * 1000);
 setInterval(shift, 5 * 60 * 1000);
 setInterval(weather, 20 * 60 * 1000);
-/* Seite alle 6 Stunden neu laden, damit neue Garmin-Daten ankommen */
+setInterval(sunArc, 5 * 60 * 1000);
+setInterval(loadData, 15 * 60 * 1000);
+setInterval(nextNews, 18 * 1000);
+setInterval(function () { nextTick(false); }, 11 * 1000);
 setTimeout(function () { location.reload(); }, 6 * 60 * 60 * 1000);
 </script>
 </body>
