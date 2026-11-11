@@ -1,54 +1,54 @@
 {
  "welt": [
   {
+   "title": "Hunderttausende bei \"Unabhängigkeitsmarsch\" in Warschau",
+   "topline": "Nationalistische Kundgebung",
+   "text": "Am polnischen Unabhängigkeitstag findet traditionell eine Großdemonstration von Rechtsnationalisten statt.",
+   "date": "2026-11-11T20:26:10.147+01:00"
+  },
+  {
    "title": "Bombendrohungen an 6.000 Schulen in Italien",
    "topline": "Regierung gibt Entwarnung",
    "text": "Von den Behörden gab es zunächst keine Angaben zu möglichen Hintergründen der Bombendrohungen.",
-   "date": "2026-11-11T16:31:39.480+01:00"
+   "date": "2026-11-11T20:13:07.807+01:00"
+  },
+  {
+   "title": "Warum übernehmen die USA Russlands Forderung?",
+   "topline": "Neue \"Sicherheitsordnung\" für Europa",
+   "text": "Russland strebt nach Hegemonie in Europa, sagt eine Sicherheitsexpertin. Nun übernähmen die USA ihre Logik.",
+   "date": "2026-11-11T19:56:21.231+01:00"
   },
   {
    "title": "Russland und Ukraine vereinbaren Gefangenenaustausch",
    "topline": "Gespräche in Abu Dhabi beendet",
    "text": "Morgen wollen die US-Gesandten Kushner und Witkoff zu Kremlchef Putin reisen.",
-   "date": "2026-11-11T15:09:53.133+01:00"
-  },
-  {
-   "title": "Generalstreik in Spanien für bezahlbares Wohnen",
-   "topline": "Wenige Wochen vor Neuwahl",
-   "text": "Seit dem Morgen läuft in Spanien ein Generalstreik. Sie fordern bessere Löhne und bezahlbare Wohnungen.",
-   "date": "2026-11-11T15:01:32.695+01:00"
-  },
-  {
-   "title": "Russland plant kein Treffen mit Europäern",
-   "topline": "Ukraine-Verhandlungen",
-   "text": "In Abu Dhabi gehen die von den USA vermittelten Gespräche über ein Ende des Kriegs gegen die Ukraine weiter.",
-   "date": "2026-11-11T12:27:20.844+01:00"
+   "date": "2026-11-11T18:30:18.079+01:00"
   }
  ],
  "region": [
   {
-   "title": "Wert von 115.000 Euro: Fahnder finden Drogen auf ICE-Toilette",
+   "title": "Feuer in Fitnessstudio-Sauna ausgebrochen - drei Verletzte",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-11T18:11:04.792+01:00"
+   "date": "2026-11-11T21:47:11.292+01:00"
   },
   {
-   "title": "Wolfsburg betroffen: VW stoppt \"Gamechanger\"-Projekt",
+   "title": "Karneval in Niedersachsen: Narren läuten fünfte Jahreszeit ein",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-11T17:52:51.655+01:00"
+   "date": "2026-11-11T20:49:27.853+01:00"
   },
   {
-   "title": "Panne an der Schwarzwasserbrücke - Brückenteile passen nicht",
+   "title": "\"Die sind mir an den Arsch gegangen\": Soldatin schildert Übergriffe",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-11T17:30:16.223+01:00"
+   "date": "2026-11-11T19:58:15.027+01:00"
   },
   {
-   "title": "Aus Projekt wird Programm: Landkreis Göttingen fördert inklusive Kitas",
+   "title": "Lingen: Eilantrag gegen Brennelemente-Fabrik abgelehnt",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-11T16:08:02.760+01:00"
+   "date": "2026-11-11T19:45:47.840+01:00"
   }
  ],
  "markt": {
@@ -56,12 +56,8 @@
  },
  "geschichte": [
   {
-   "year": 1966,
-   "text": "Mit Gemini 12 startet der letzte Raum­flug im Rahmen des Gemini-Pro­gramms der NASA; an Bord befin­den sich Buzz Aldrin und Jim Lovell."
-  },
-  {
-   "year": 826,
-   "text": "Im Tryphonkloster stirbt der byzan­tinische Mönch, Abt und Kirchen­lehrer Theodoros Studites (Bild)."
+   "year": 1976,
+   "text": "Die Popgruppe ABBA veröffent­licht ihren Song Money, Money, Money."
   }
  ]
 }
