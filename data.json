@@ -1,31 +1,37 @@
 {
  "welt": [
   {
-   "title": "Hunderttausende bei \"Unabhängigkeitsmarsch\" in Warschau",
-   "topline": "Nationalistische Kundgebung",
-   "text": "Am polnischen Unabhängigkeitstag findet traditionell eine Großdemonstration von Rechtsnationalisten statt.",
-   "date": "2026-11-11T20:26:10.147+01:00"
+   "title": "Der lange Weg zur schwarzen Stimme",
+   "topline": "Historischer Sieg in Mississippi",
+   "text": "Nach 145 Jahren wird Mississippi erstmals wieder durch einen schwarzen Senator im US-Kongress vertreten.",
+   "date": "2026-11-12T05:37:34.317+01:00"
   },
   {
-   "title": "Bombendrohungen an 6.000 Schulen in Italien",
-   "topline": "Regierung gibt Entwarnung",
-   "text": "Von den Behörden gab es zunächst keine Angaben zu möglichen Hintergründen der Bombendrohungen.",
-   "date": "2026-11-11T20:13:07.807+01:00"
+   "title": "Tote und Verletzte nach Gebäudeeinsturz in New York",
+   "topline": "Im Stadtteil Brooklyn",
+   "text": "Beim Einsturz eines mehrstöckigen Gebäudes in New York sind mindestens zwei Menschen ums Leben gekommen.",
+   "date": "2026-11-12T04:34:55.781+01:00"
   },
   {
-   "title": "Warum übernehmen die USA Russlands Forderung?",
-   "topline": "Neue \"Sicherheitsordnung\" für Europa",
-   "text": "Russland strebt nach Hegemonie in Europa, sagt eine Sicherheitsexpertin. Nun übernähmen die USA ihre Logik.",
-   "date": "2026-11-11T19:56:21.231+01:00"
+   "title": "Der Papst und die Missbrauchsskandale",
+   "topline": "Offene Wunden",
+   "text": "In der zweiten Heimat des Papstes, Peru, gibt es Missbrauchsvorwürfe gegen die Organisation Sodalicio.",
+   "date": "2026-11-12T03:33:13.437+01:00"
   },
   {
-   "title": "Russland und Ukraine vereinbaren Gefangenenaustausch",
-   "topline": "Gespräche in Abu Dhabi beendet",
-   "text": "Morgen wollen die US-Gesandten Kushner und Witkoff zu Kremlchef Putin reisen.",
-   "date": "2026-11-11T18:30:18.079+01:00"
+   "title": "Demokrat Colom holt Senatssitz in Mississippi",
+   "topline": "Historischer Sieg",
+   "text": "Erstmals seit mehr als vier Jahrzehnten hat ein Demokrat in Mississippi eine Wahl für den US-Senat gewonnen.",
+   "date": "2026-11-12T03:08:44.934+01:00"
   }
  ],
  "region": [
+  {
+   "title": "Elbfähre \"Tanja\": Taucher sollen Antriebe ausbauen",
+   "topline": "Niedersachsen",
+   "text": "",
+   "date": "2026-11-12T01:00:00.080+01:00"
+  },
   {
    "title": "Feuer in Fitnessstudio-Sauna ausgebrochen - drei Verletzte",
    "topline": "Niedersachsen",
@@ -43,12 +49,6 @@
    "topline": "Niedersachsen",
    "text": "",
    "date": "2026-11-11T19:58:15.027+01:00"
-  },
-  {
-   "title": "Lingen: Eilantrag gegen Brennelemente-Fabrik abgelehnt",
-   "topline": "Niedersachsen",
-   "text": "",
-   "date": "2026-11-11T19:45:47.840+01:00"
   }
  ],
  "markt": {
