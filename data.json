@@ -1,6 +1,18 @@
 {
  "welt": [
   {
+   "title": "Europa soll mit an den Verhandlungstisch",
+   "topline": "Friedensgespräche",
+   "text": "Von Putin zu Selenskyj - die US-Unterhändler kommen mit  Ankündigungen aus Moskau nach Dublin.",
+   "date": "2026-11-13T02:28:11.288+01:00"
+  },
+  {
+   "title": "Momentum für Friedensverhandlungen?",
+   "topline": "EPG-Treffen in Dublin",
+   "text": "Das Treffen in Dublin bringt neue Dynamik in die Friedensverhandlungen - am Abend kommen noch die US-Unterhändler Witkoff und Kushner aus Moskau angereist.",
+   "date": "2026-11-13T02:22:12.286+01:00"
+  },
+  {
    "title": "Tote und Verletzte nach Gebäudeeinsturz in New York",
    "topline": "Im Stadtteil Brooklyn",
    "text": "Nach dem Einsturz eines mehrstöckigen Gebäudes in New York ist die Zahl der Toten auf mindestens acht gestiegen.",
@@ -11,21 +23,15 @@
    "topline": "Weltklimakonferenz COP31",
    "text": "Wenn die Weltgemeinschaft nichts ändert, rechnet ein neuer Bericht mit 2,7 Grad Erderwärmung.",
    "date": "2026-11-12T19:44:20.350+01:00"
-  },
-  {
-   "title": "Putin beharrt auf Gebietsansprüchen",
-   "topline": "Krieg gegen die Ukraine",
-   "text": "Bei dem Treffen mit US-Unterhändlern zeigt sich Russlands Präsident Putin bei der Gebietsfrage unnachgiebig.",
-   "date": "2026-11-12T17:29:23.536+01:00"
-  },
-  {
-   "title": "Parlament beschließt Maßnahmen für mehr Mieterschutz",
-   "topline": "Wohnungskrise in Spanien",
-   "text": "Die konservative PP-Partei will das Dekret wieder kippen. In zwei Wochen wird in Spanien gewählt.",
-   "date": "2026-11-12T17:21:41.286+01:00"
   }
  ],
  "region": [
+  {
+   "title": "Heute Klimastreik: Hier sind Demos in Niedersachsen geplant",
+   "topline": "Niedersachsen",
+   "text": "",
+   "date": "2026-11-13T00:10:00.057+01:00"
+  },
   {
    "title": "60.000 Euro Schulden: Alleinerziehende hofft auf einen Neuanfang",
    "topline": "Niedersachsen",
@@ -43,12 +49,6 @@
    "topline": "Niedersachsen",
    "text": "",
    "date": "2026-11-12T21:03:56.155+01:00"
-  },
-  {
-   "title": "Boden über den Kavernen sinkt ab: Schäden an Häusern - wer zahlt?",
-   "topline": "Niedersachsen",
-   "text": "",
-   "date": "2026-11-12T20:58:13.770+01:00"
   }
  ],
  "markt": {
@@ -56,8 +56,8 @@
  },
  "geschichte": [
   {
-   "year": 1976,
-   "text": "Die Popgruppe ABBA veröffent­licht ihren Song Money, Money, Money."
+   "year": 1886,
+   "text": "In Hannover kommt Mary Wigman, eine Pionierin des Ausdrucks­tanzes, zur Welt."
   }
  ]
 }
