@@ -1,10 +1,16 @@
 {
  "welt": [
   {
+   "title": "Startverbot an US-Flughäfen aufgehoben",
+   "topline": "Nach technischen Problemen",
+   "text": "Nach mehreren Stunden läuft der Flugverkehr in den USA wieder an.",
+   "date": "2026-11-14T03:36:59.552+01:00"
+  },
+  {
    "title": "US-Kreuzfahrtschiff kentert nach Zusammenprall",
    "topline": "New Orleans",
    "text": "Das Flusskreuzfahrtschiff \"American Heritage\" ist im Hafen der US-Stadt New Orleans gekentert.",
-   "date": "2026-11-13T22:37:39.749+01:00"
+   "date": "2026-11-14T01:51:37.198+01:00"
   },
   {
    "title": "Ermittlungen gegen britischen Kinderbuchautor Walliams",
@@ -17,12 +23,6 @@
    "topline": "Nvidia-Skandal",
    "text": "Das US-Handelsministerium soll Warnungen vor der in den Nvidia-Skandal verwickelten Firma Megaspeed ignoriert haben.",
    "date": "2026-11-13T20:06:39.480+01:00"
-  },
-  {
-   "title": "Europas Team für die Ukraine-Verhandlungen steht",
-   "topline": "Einigung bei Gipfel in Dublin",
-   "text": "Die EU-Institutionen und fünf Länder - darunter Deutschland - sollen Europa bei Gesprächen mit Russland vertreten.",
-   "date": "2026-11-13T19:44:23.714+01:00"
   }
  ],
  "region": [
@@ -56,8 +56,24 @@
  },
  "geschichte": [
   {
-   "year": 1886,
-   "text": "In Hannover kommt Mary Wigman, eine Pionierin des Ausdrucks­tanzes, zur Welt."
+   "year": 1971,
+   "text": "Nach Erreichen des Mars schwenkt Mariner 9 als erste Raum­sonde in die Umlauf­bahn eines anderen Planeten als der Erde ein."
+  },
+  {
+   "year": 1966,
+   "text": "Die Radrennfahrerin Petra Rossner, spätere Olympia­siegerin und Welt­meisterin in der Bahn-Einer­verfolgung, wird in Leipzig geboren."
+  },
+  {
+   "year": 1966,
+   "text": "Muhammad Ali verteidigt seinen WBC-Schwer­gewichts-Weltmeister­titel gegen Cleveland Williams."
+  },
+  {
+   "year": 1941,
+   "text": "Alfred Hitchcocks Psychothriller Suspicion mit Joan Fontaine und Cary Grant in den Haupt­rollen feiert Premiere."
+  },
+  {
+   "year": 976,
+   "text": "Song Taizu, Begründer und erster Kaiser der Song-Dynastie, stirbt in Kaifeng."
   }
  ]
 }
