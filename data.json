@@ -1,31 +1,37 @@
 {
  "welt": [
   {
-   "title": "Was über das Startverbot für Flugzeuge bekannt ist",
-   "topline": "Luftverkehr in den USA",
-   "text": "Was war der Grund für das \"Grounding\" der Maschinen - und wie groß waren die Auswirkungen?",
-   "date": "2026-11-14T16:22:57.188+01:00"
+   "title": "EU fordert Zugang für Helfer in Gazastreifen",
+   "topline": "Überschwemmungen und Kälte",
+   "text": "Dort hatte heftiger Regen die Zelte von Zehntausenden Vertriebenen überschwemmt. Auch die Kälte wird zur Gefahr.",
+   "date": "2026-11-14T20:09:28.082+01:00"
   },
   {
-   "title": "32 Verletzte nach Kollision von Dampfer und Tanker",
-   "topline": "New Orleans",
-   "text": "Ein Tanker hat in New Orleans ein Kreuzfahrtschiff gerammt. Es kentert. Doch alle Passagiere überleben.",
-   "date": "2026-11-14T14:48:00.342+01:00"
+   "title": "Was über die Luftfahrt-Panne bekannt ist",
+   "topline": "Flugverkehr in den USA",
+   "text": "Was war der Grund für das \"Grounding\" der Maschinen - und wie groß waren die Auswirkungen?",
+   "date": "2026-11-14T19:49:48.293+01:00"
+  },
+  {
+   "title": "Tausende bei Protesten zur COP31 in Antalya",
+   "topline": "Mehr Klimagerechtigkeit gefordert",
+   "text": "Die Teilnehmer wollen, dass die Industriestaaten stärker zur Kasse gebeten werden.",
+   "date": "2026-11-14T19:47:48.368+01:00"
   },
   {
    "title": "USA bieten laut Selenskyj NATO-Beitritt bei Gebietsverzicht",
    "topline": "Krieg gegen die Ukraine",
    "text": "Unter bestimmten Bedingungen würde er diese Frage in einem Referendum zur Abstimmung stellen, so Selenskyj.",
-   "date": "2026-11-14T13:42:12.404+01:00"
-  },
-  {
-   "title": "Migranten auf dem Weg Richtung USA",
-   "topline": "Nach US-Zwischenwahlen",
-   "text": "Nach dem Sieg der Demokraten bei den Midterms hat sich Migranten auf den Weg Richtung USA gemacht.",
-   "date": "2026-11-14T08:21:14.673+01:00"
+   "date": "2026-11-14T18:21:30.356+01:00"
   }
  ],
  "region": [
+  {
+   "title": "Kurzfristig fehlt Personal: Mehrere Metronom-Züge ausgefallen",
+   "topline": "Niedersachsen",
+   "text": "",
+   "date": "2026-11-14T19:53:53.427+01:00"
+  },
   {
    "title": "Fliegender Weihnachtsmann in Lingen: So aufwendig ist der Aufbau",
    "topline": "Niedersachsen",
@@ -43,12 +49,6 @@
    "topline": "Niedersachsen",
    "text": "",
    "date": "2026-11-14T15:35:20.060+01:00"
-  },
-  {
-   "title": "NDR Niedersachsen: Unsere Themen bei Instagram!",
-   "topline": "Niedersachsen",
-   "text": "",
-   "date": "2026-11-14T15:11:08.606+01:00"
   }
  ],
  "markt": {
