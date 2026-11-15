@@ -1,6 +1,12 @@
 {
  "welt": [
   {
+   "title": "\"Starship\"-Rakete kehrt nach Flug zur Startrampe zurück",
+   "topline": "Erfolg für SpaceX",
+   "text": "Erstmals landete die etwa 50 Meter große obere Raketenstufe wieder auf der Erde.",
+   "date": "2026-11-15T00:12:16.793+01:00"
+  },
+  {
    "title": "EU fordert Zugang für Helfer in Gazastreifen",
    "topline": "Überschwemmungen und Kälte",
    "text": "Dort hatte heftiger Regen die Zelte von Zehntausenden Vertriebenen überschwemmt. Auch die Kälte wird zur Gefahr.",
@@ -17,12 +23,6 @@
    "topline": "Mehr Klimagerechtigkeit gefordert",
    "text": "Die Teilnehmer wollen, dass die Industriestaaten stärker zur Kasse gebeten werden.",
    "date": "2026-11-14T19:47:48.368+01:00"
-  },
-  {
-   "title": "USA bieten laut Selenskyj NATO-Beitritt bei Gebietsverzicht",
-   "topline": "Krieg gegen die Ukraine",
-   "text": "Unter bestimmten Bedingungen würde er diese Frage in einem Referendum zur Abstimmung stellen, so Selenskyj.",
-   "date": "2026-11-14T18:21:30.356+01:00"
   }
  ],
  "region": [
@@ -56,24 +56,20 @@
  },
  "geschichte": [
   {
-   "year": 1971,
-   "text": "Nach Erreichen des Mars schwenkt Mariner 9 als erste Raum­sonde in die Umlauf­bahn eines anderen Planeten als der Erde ein."
+   "year": 1976,
+   "text": "Vor Hawaii wird ein Riesenmaul­hai, eine bis dahin unbekannte Hai­art, gefangen."
   },
   {
-   "year": 1966,
-   "text": "Die Radrennfahrerin Petra Rossner, spätere Olympia­siegerin und Welt­meisterin in der Bahn-Einer­verfolgung, wird in Leipzig geboren."
+   "year": 1926,
+   "text": "In München wird der Volks­schauspieler Helmut Fischer (Monaco Franze) geboren."
   },
   {
-   "year": 1966,
-   "text": "Muhammad Ali verteidigt seinen WBC-Schwer­gewichts-Weltmeister­titel gegen Cleveland Williams."
+   "year": 1901,
+   "text": "Der Königs­berger See­kanal wird in Betrieb genommen."
   },
   {
-   "year": 1941,
-   "text": "Alfred Hitchcocks Psychothriller Suspicion mit Joan Fontaine und Cary Grant in den Haupt­rollen feiert Premiere."
-  },
-  {
-   "year": 976,
-   "text": "Song Taizu, Begründer und erster Kaiser der Song-Dynastie, stirbt in Kaifeng."
+   "year": 1776,
+   "text": "Pehr Henrik Ling, Begründer der schwedischen Gymnastik und Massage, kommt zur Welt."
   }
  ]
 }
