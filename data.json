@@ -1,6 +1,18 @@
 {
  "welt": [
   {
+   "title": "Estland schließt Grenzübergänge nach Russland",
+   "topline": "Reaktion auf Brandanschlag",
+   "text": "Estland unterstützt die Ukraine im Kampf gegen Russland - unter anderem mit Drohnen.",
+   "date": "2026-11-15T21:44:43.325+01:00"
+  },
+  {
+   "title": "Einheitsregierung? Netanjahu wirbt um Eisenkot",
+   "topline": "Israel nach der Wahl",
+   "text": "Oppositionspolitiker Eisenkot sucht nach Partnern für eine Koalition. Noch-Premier Netanjahu hat eigene Vorstellungen.",
+   "date": "2026-11-15T21:23:26.531+01:00"
+  },
+  {
    "title": "Serie von Angriffen - auch Energieanlagen betroffen",
    "topline": "Ukraine und Russland",
    "text": "Am Wochenende hat es eine Serie russischer Angriffe auf die Ukraine gegeben -  laut Präsident Selenskyj sind auch Energieanlagen darunter.",
@@ -11,18 +23,6 @@
    "topline": "Spanische Inselgruppe",
    "text": "Rund 1.500 Migranten haben innerhalb eines Tages die kanarischen Inseln erreicht - eine Rekordzahl.",
    "date": "2026-11-15T18:31:41.404+01:00"
-  },
-  {
-   "title": "Estland schließt Grenzübergänge nach Russland",
-   "topline": "Reaktion auf Brandanschlag",
-   "text": "Estland unterstützt die Ukraine im Kampf gegen Russland - unter anderem mit Drohnen.",
-   "date": "2026-11-15T17:52:46.923+01:00"
-  },
-  {
-   "title": "Großdemonstration gegen Rundfunkreform in Tschechien",
-   "topline": "Proteste in Prag",
-   "text": "Die Teilnehmer befürchten, die Regierung könnte die Sender mit der Reform unter ihre Kontrolle bringen.",
-   "date": "2026-11-15T16:40:55.479+01:00"
   }
  ],
  "region": [
@@ -57,19 +57,19 @@
  "geschichte": [
   {
    "year": 1976,
-   "text": "Vor Hawaii wird ein Riesenmaul­hai, eine bis dahin unbekannte Hai­art, gefangen."
+   "text": "Der Liedermacher Wolf Bier­mann wird während einer Konzert­reise durch die Bundes­republik Deutschland aus der DDR ausge­bürgert."
   },
   {
    "year": 1926,
-   "text": "In München wird der Volks­schauspieler Helmut Fischer (Monaco Franze) geboren."
+   "text": "Mit grundlegenden Änderungen beginnt die Saison 1926/27 der nord­amerikanischen Eishockey­liga NHL."
+  },
+  {
+   "year": 1926,
+   "text": "In Berlin-Schöneberg stirbt der Pianist und Komponist Paul Colberg."
   },
   {
    "year": 1901,
-   "text": "Der Königs­berger See­kanal wird in Betrieb genommen."
-  },
-  {
-   "year": 1776,
-   "text": "Pehr Henrik Ling, Begründer der schwedischen Gymnastik und Massage, kommt zur Welt."
+   "text": "In Prag kommt die Künstlerin und Illustratorin Milada Marešová zur Welt."
   }
  ]
 }
