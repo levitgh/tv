@@ -1,60 +1,64 @@
 {
  "welt": [
   {
-   "title": "EU-Staaten wollen 2027 Abschiebezentrum in Ruanda eröffnen",
-   "topline": "Für abgelehnte Asylbewerber",
-   "text": "Es sei für abgelehnte Asylbewerber, die nicht in ihre Herkunftsländer abgeschoben werden können.",
-   "date": "2026-11-16T18:07:43.286+01:00"
+   "title": "Regierung setzt Militär gegen Drogenbanden ein",
+   "topline": "Ausnahmezustand in Guatemala",
+   "text": "Teile Guatemalas sind zunehmend im Griff von Drogenbanden.",
+   "date": "2026-11-17T07:45:47.552+01:00"
   },
   {
-   "title": "EU sanktioniert Propagandisten, Hacker und Banken",
-   "topline": "Strafmaßnahmen gegen Russland",
-   "text": "Von Russlands reichster Unternehmerin bis zu Unternehmen aus China: Die EU hat weitere Sanktionen verhängt.",
-   "date": "2026-11-16T17:06:44.253+01:00"
+   "title": "Zwei wichtige Brücken in Kiew getroffen",
+   "topline": "Ukraine und Russland melden Angriffe",
+   "text": "Auch Russland meldete Angriffe, darunter auf die Brücke zur Krim.",
+   "date": "2026-11-17T07:36:47.954+01:00"
   },
   {
-   "title": "Ein erster Entwurf, der für Diskussionen sorgen dürfte",
-   "topline": "Abschlusserklärung für Weltklimakonferenz",
-   "text": "Auf der Weltklimakonferenz in Antalya hat die entscheidende Phase begonnen.",
-   "date": "2026-11-16T17:05:30.097+01:00"
+   "title": "Studentischer Neustart für Serbiens Politik",
+   "topline": "Parlament konstituiert sich",
+   "text": "Nach dem Sieg der Studentenliste bei der Wahl in Serbien tritt heute erstmals das Parlament zusammen.",
+   "date": "2026-11-17T07:13:09.178+01:00"
   },
   {
-   "title": "Depardieu akzeptiert Urteil und zeigt Reue",
-   "topline": "Sexuelle Übergriffe",
-   "text": "Der 77-Jährige hat sich nie einsichtig gezeigt - bis jetzt. Schon nächste Woche steht der nächste Gerichtstermin an.",
-   "date": "2026-11-16T15:46:58.527+01:00"
+   "title": "Erste Vorgespräche mit Europas Unterhändlern",
+   "topline": "Krieg gegen die Ukraine",
+   "text": "Europa hat erstmals mit den USA und Kiew über eine Beendigung des Kriegs diskutiert.",
+   "date": "2026-11-17T04:28:15.114+01:00"
   }
  ],
  "region": [
   {
-   "title": "Streckenstörung zwischen Berlin und Hannover: Züge verspäten sich",
+   "title": "\"Klitschkos\" aus Celle: Box-Zwillinge treten nie gegeneinander an",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-16T21:26:49.627+01:00"
+   "date": "2026-11-16T20:29:34.118+01:00"
   },
   {
-   "title": "Schwimmendes LNG-Terminal geht in Stade in Betrieb",
+   "title": "Dachstuhlbrand in Wagenfeld: Rund 200.000 Euro Schaden",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-16T20:57:21.674+01:00"
+   "date": "2026-11-17T09:37:59.866+01:00"
   },
   {
-   "title": "Wolle, Verantwortung, Vorurteile: Junge Landwirtin führt Schäferei",
+   "title": "Wegen Blondierung vor Gericht: Friseurin zahlt Kundin 2.000 Euro",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-16T20:54:12.560+01:00"
+   "date": "2026-11-17T09:25:38.464+01:00"
   },
   {
-   "title": "Stahlgipfel in Salzgitter: Industrie hat klare Forderungen an Reiche",
+   "title": "Millionenschweres Nothilfeprogramm für Schweinehalter geplant",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-16T20:53:33.797+01:00"
+   "date": "2026-11-17T09:13:12.414+01:00"
   }
  ],
  "markt": {
   "eurusd": 1.1014
  },
  "geschichte": [
+  {
+   "year": 2001,
+   "text": "Der Boxer Lennox Lewis gewinnt gegen Hasim Rahman durch den „Knockout des Jahres“ und wird erneut Welt­meister im Schwergewicht."
+  },
   {
    "year": 1866,
    "text": "Die Oper Mignon von Ambroise Thomas, mit Célestine Galli-Marié (Bild) in der Titelrolle, wird an der Opéra-Comique in Paris uraufgeführt."
