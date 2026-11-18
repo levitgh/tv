@@ -1,54 +1,54 @@
 {
  "welt": [
   {
-   "title": "\"Nach 14 Jahren echte Vertreter des Volkes\"",
-   "topline": "Serbiens Parlament konstituiert",
-   "text": "Nach dem historischen Wahlsieg der Studentenbewegung ist Serbiens Parlament erstmals zusammengetreten.",
-   "date": "2026-11-17T18:35:34.755+01:00"
+   "title": "\"Ziemlich dumm\" - Pistorius reagiert auf US-Kritik",
+   "topline": "Ukrainische Angriffe",
+   "text": "Die USA kritisierten die ukrainischen Angriffe auf Russland. Der Bundesverteidigungsminister reagierte scharf.",
+   "date": "2026-11-17T22:20:52.596+01:00"
   },
   {
-   "title": "USA prüfen mögliche Anschlagspläne Irans auf Washington",
-   "topline": "Bericht über schmutzige Bombe",
-   "text": "US-Präsident Trump versicherte, die USA nähmen eine mögliche Bedrohung Washingtons \"sehr ernst\".",
-   "date": "2026-11-17T17:36:43.247+01:00"
+   "title": "Sozialproteste in Frankreich reißen nicht ab",
+   "topline": "Aufruf von Gewerkschaften",
+   "text": "Landesweit gab es Streiks und Demonstrationen für höhere Gehälter und bessere Bildungsbedingungen.",
+   "date": "2026-11-17T21:02:01.877+01:00"
   },
   {
-   "title": "Schneider für schnellen Ausbau Erneuerbarer Energien",
-   "topline": "Rede auf Weltklimagipfel",
-   "text": "Umweltminister Schneider hat für einen schnellen Ausstieg aus der Nutzung von Öl, Kohle und Gas geworben.",
-   "date": "2026-11-17T17:24:25.948+01:00"
+   "title": "Wie schwer ist die Krim-Brücke getroffen?",
+   "topline": "Verbindung zur besetzten Halbinsel",
+   "text": "Die Brücke ist nicht nur eine wichtige Verbindung zwischen Russland und der annektierten Krim, sondern auch ein Symbol.",
+   "date": "2026-11-17T19:59:39.522+01:00"
   },
   {
-   "title": "Trump auf Gipfel-Tour durch Asien",
-   "topline": "ASEAN, Quad, APEC",
-   "text": "ASEAN, Quad, APEC: US-Präsident Trump nimmt derzeit an einem Asien-Pazifik-Treffen nach dem anderen teil.",
-   "date": "2026-11-17T16:53:23.139+01:00"
+   "title": "USA gelten nicht mehr als masernfrei",
+   "topline": "Erstmals seit 2000",
+   "text": "Mehr als ein Vierteljahrhundert lang galten die USA als masernfreies Land - jetzt verlor das Land den Status.",
+   "date": "2026-11-17T19:37:07.375+01:00"
   }
  ],
  "region": [
   {
-   "title": "Nach acht Jahren Pause: In Rehden soll wieder Gas gefördert werden",
+   "title": "S4 fällt zwischen Hannover und Hildesheim eine Woche aus",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-17T18:58:08.843+01:00"
+   "date": "2026-11-18T00:01:00.152+01:00"
   },
   {
-   "title": "Bauarbeiten für die neue Feuerwache in Nordhorn gestartet",
+   "title": "Unfall mit sechs Verletzten in Ganderkesee: Mensch in Lebensgefahr",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-17T18:46:41.581+01:00"
+   "date": "2026-11-17T21:54:49.473+01:00"
   },
   {
-   "title": "Straftäter aus Psychiatrie in Bremen geflohen: Ist er im Ausland?",
+   "title": "Juliane Bartel Preis 2026: Preisträger in vier Kategorien geehrt",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-17T18:40:51.842+01:00"
+   "date": "2026-11-17T21:45:10.380+01:00"
   },
   {
-   "title": "Hildesheim: Weihnachtspostamt Himmelsthür legt los",
+   "title": "Störung auf der Strecke Hannover-Berlin: Erste Züge fahren wieder",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-17T18:35:43.487+01:00"
+   "date": "2026-11-17T21:35:01.830+01:00"
   }
  ],
  "markt": {
@@ -56,16 +56,12 @@
  },
  "geschichte": [
   {
-   "year": 2001,
-   "text": "Der Boxer Lennox Lewis gewinnt gegen Hasim Rahman durch den „Knockout des Jahres“ und wird erneut Welt­meister im Schwergewicht."
+   "year": 1901,
+   "text": "Der Hay-Pauncefote-Vertrag mit Groß­bri­tannien sichert den USA die allei­nigen Rechte am Panamakanal."
   },
   {
-   "year": 1866,
-   "text": "Die Oper Mignon von Ambroise Thomas, mit Célestine Galli-Marié (Bild) in der Titelrolle, wird an der Opéra-Comique in Paris uraufgeführt."
-  },
-  {
-   "year": 1796,
-   "text": "Noch am Todestag Katharina der Großen erklärt sich ihr Sohn Paul zum neuen russischen Kaiser."
+   "year": 1626,
+   "text": "Der Petersdom in Rom (Bild) wird von Papst Urban VIII. nach einer Bauzeit von 120 Jah­ren ein­geweiht."
   }
  ]
 }
