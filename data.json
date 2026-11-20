@@ -25,9 +25,43 @@
    "date": "2026-11-19T16:08:53.817+01:00"
   }
  ],
- "region": [],
+ "region": [
+  {
+   "title": "Nach wochenlanger Kritik: Justizministerin Wahlmann tritt zurück",
+   "topline": "Niedersachsen",
+   "text": "",
+   "date": "2026-11-19T21:37:46.164+01:00"
+  },
+  {
+   "title": "Nach Rücktritt: Lies hält Wahlmanns Entscheidung für \"richtig\"",
+   "topline": "Niedersachsen",
+   "text": "",
+   "date": "2026-11-19T21:36:05.651+01:00"
+  },
+  {
+   "title": "NDR Wahlumfrage: SPD liegt deutlich vorn, CDU und AfD gleichauf",
+   "topline": "Niedersachsen",
+   "text": "",
+   "date": "2026-11-19T21:35:46.719+01:00"
+  },
+  {
+   "title": "Analyse zu NDR Wahlumfrage: Merz-Effekt erwischt Niedersachsen-CDU",
+   "topline": "Niedersachsen",
+   "text": "",
+   "date": "2026-11-19T21:34:52.155+01:00"
+  }
+ ],
  "markt": {
   "eurusd": 1.0992
  },
- "geschichte": []
+ "geschichte": [
+  {
+   "year": 1906,
+   "text": "Unter der Regie von Max Reinhardt wird an den Berliner Kammer­spielen Frank Wedekinds Drama Frühlings Erwachen urauf­geführt."
+  },
+  {
+   "year": 1711,
+   "text": "Gerrit Roosen, Hamburger Kauf­mann und lang­jähriger Prediger der Mennoniten­gemeinde zu Altona, stirbt."
+  }
+ ]
 }
