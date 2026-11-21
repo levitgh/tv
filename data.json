@@ -1,6 +1,18 @@
 {
  "welt": [
   {
+   "title": "Dänemark weist russischen Diplomaten aus",
+   "topline": "Mutmaßlicher Anschlagsplan",
+   "text": "Russland soll auf dänischem Boden einen Anschlag auf einen ukrainisch-amerikanischen Rapper geplant haben.",
+   "date": "2026-11-20T22:28:00.507+01:00"
+  },
+  {
+   "title": "Schuldsprüche in britischem Vergewaltigungsprozess",
+   "topline": "Ehefrau betäubt und im Internet angeboten",
+   "text": "Die Britin Joanne Young wurde über Jahre von ihrem Ehemann betäubt - und dann im Internet zur Vergewaltigung angeboten.",
+   "date": "2026-11-20T21:25:44.866+01:00"
+  },
+  {
    "title": "Schwerer Vorwurf gegen Depardieu und Houellebecq",
    "topline": "Anzeige wegen Gruppenvergewaltigung",
    "text": "Laut einem Medienbericht geschah die Tat bei einem Filmdreh im Jahr 2018.",
@@ -11,26 +23,20 @@
    "topline": "Britischer Premier Burnham in Brüssel",
    "text": "Sechs Jahre nach dem Brexit rücken Großbritannien und die EU wieder näher zusammen.",
    "date": "2026-11-20T18:44:07.450+01:00"
-  },
-  {
-   "title": "İmamoğlu darf nicht als türkischer Präsident kandidieren",
-   "topline": "Größter Herausforderer von Erdoğan",
-   "text": "Der Oppositionspolitiker ist mit einem Einspruch gegen die Aberkennung des Hochschulabschlusses gescheitert.",
-   "date": "2026-11-20T17:30:28.897+01:00"
-  },
-  {
-   "title": "Polen wirft Russland gezielte Provokation vor",
-   "topline": "Raketeneinschlag in NATO-Land",
-   "text": "Mehrere Flugkörper sind in den polnischen Luftraum eingedrungen - Warschau sieht eine gezielte Provokation.",
-   "date": "2026-11-20T17:22:28.309+01:00"
   }
  ],
  "region": [
   {
+   "title": "Bis Montagmorgen: A1 zwischen Bramsche und Rieste voll gesperrt",
+   "topline": "Niedersachsen",
+   "text": "",
+   "date": "2026-11-20T22:30:00.009+01:00"
+  },
+  {
    "title": "\"Gen Z regelt\", Schüler und Studenten: Hunderte demonstrieren",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-20T19:47:01.594+01:00"
+   "date": "2026-11-20T21:06:50.369+01:00"
   },
   {
    "title": "Nach Rücktritt: Lies hält Wahlmanns Entscheidung für \"richtig\"",
@@ -43,12 +49,6 @@
    "topline": "Niedersachsen",
    "text": "",
    "date": "2026-11-20T19:01:03.625+01:00"
-  },
-  {
-   "title": "Nach Rücktritt von Wahlmann: Wer übernimmt im Justizministerium?",
-   "topline": "Niedersachsen",
-   "text": "",
-   "date": "2026-11-20T19:00:48.587+01:00"
   }
  ],
  "markt": {
@@ -56,12 +56,24 @@
  },
  "geschichte": [
   {
-   "year": 1906,
-   "text": "Unter der Regie von Max Reinhardt wird an den Berliner Kammer­spielen Frank Wedekinds Drama Frühlings Erwachen urauf­geführt."
+   "year": 2016,
+   "text": "Die vor allem auf dem Gebiet der Material­wissenschaft tätige Physikerin Karimat El-Sayed stirbt."
   },
   {
-   "year": 1711,
-   "text": "Gerrit Roosen, Hamburger Kauf­mann und lang­jähriger Prediger der Mennoniten­gemeinde zu Altona, stirbt."
+   "year": 1896,
+   "text": "Der elf Wochen andauernde Hamburger Hafenarbeiter­streik, einer der größten Arbeits­kämpfe in der Zeit des Deutschen Kaiserreichs, beginnt."
+  },
+  {
+   "year": 1831,
+   "text": "Nachdem Unternehmer sich weigern, den verein­barten Mindest­lohn zu be­zahlen, beginnt der erste Aufstand der Seidenweber in Lyon."
+  },
+  {
+   "year": 1811,
+   "text": "In Hunan kommt Zeng Guofan zur Welt, der in der Zeit der Qing-Dynastie zum hohen Beamten und Heer­führer aufsteigen wird."
+  },
+  {
+   "year": 1676,
+   "text": "Der Astronom Ole Rømer stellt der Pariser Académie des sciences seine These vor, dass die Licht­geschwindigkeit eine endliche Größe sei."
   }
  ]
 }
