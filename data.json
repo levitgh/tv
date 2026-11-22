@@ -1,6 +1,18 @@
 {
  "welt": [
   {
+   "title": "Russisches Frachtschiff wird abgeschleppt",
+   "topline": "Nach Drohnenangriff in der Ostsee",
+   "text": "Laut finnischem Grenzschutz hat das Schiff Schlagseite, kann aber in russische Gewässer geschleppt werden.",
+   "date": "2026-11-22T20:53:03.861+01:00"
+  },
+  {
+   "title": "Explosion auf russischem Schiff in Libyen",
+   "topline": "Mutmaßlicher Drohnenangriff",
+   "text": "In einem Hafen der libyschen Stadt Bengasi hat es eine Explosion auf einem russischen Kriegsschiff gegeben.",
+   "date": "2026-11-22T19:43:06.263+01:00"
+  },
+  {
    "title": "Tausende demonstrieren in Istanbul für Pressefreiheit",
    "topline": "Nach Schließung von Medien",
    "text": "Zu der Demonstration hatte die größte Oppositionspartei Yeni aufgerufen.",
@@ -11,18 +23,6 @@
    "topline": "Indonesien",
    "text": "Etwa 60 Menschen sollen sich zum Zeitpunkt des Ausbruchs im Gebäude aufgehalten haben.",
    "date": "2026-11-22T16:21:42.411+01:00"
-  },
-  {
-   "title": "Journalismus unter Zwangsverwaltung",
-   "topline": "Türkischer Sender Sözcü TV",
-   "text": "Der Sender Sözcü steht seit wenigen Tagen unter Zwangsverwaltung - was hat sich seitdem verändert?",
-   "date": "2026-11-22T15:21:45.117+01:00"
-  },
-  {
-   "title": "Löscharbeiten an russischem Schiff - Fracht unbekannt",
-   "topline": "Nach Drohnenangriff in der Ostsee",
-   "text": "Was der russische Frachter geladen hat, ist weiterhin unklar. Er war von einer Drohne getroffen worden.",
-   "date": "2026-11-22T12:41:16.075+01:00"
   }
  ],
  "region": [
@@ -30,7 +30,7 @@
    "title": "Unfall auf A27 endet mit zehn Verletzten und einer Festnahme",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-22T17:44:11.646+01:00"
+   "date": "2026-11-22T17:52:56.066+01:00"
   },
   {
    "title": "Autofahrer fährt auf Flucht vor Polizei gegen Haus",
