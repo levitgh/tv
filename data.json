@@ -1,6 +1,18 @@
 {
  "welt": [
   {
+   "title": "Social-Media-Verbot mit Lücken und Mängeln",
+   "topline": "Gesetz in Australien",
+   "text": "Vor einem Jahr trat in Australien das Social-Media-Verbot für unter 16-Jährige in Kraft. Wie ist die Bilanz?",
+   "date": "2026-11-22T08:26:24.116+01:00"
+  },
+  {
+   "title": "Neuer Entwurf, unklares Ergebnis",
+   "topline": "UN-Klimakonferenz in Antalya",
+   "text": "Eigentlich sollte die COP31 Freitag enden - doch die fast 200 Staaten ringen weiter um eine Abschlusserklärung.",
+   "date": "2026-11-22T06:21:04.208+01:00"
+  },
+  {
    "title": "Handfester Protest gegen PFAS-Verseuchung",
    "topline": "Niederlande",
    "text": "Im niederländischen Dordrecht kämpfen die Bürger gegen die Produktion von sogenannten Ewigkeitschemikalien.",
@@ -11,44 +23,32 @@
    "topline": "Finnischer Meerbusen",
    "text": "In der Ostseeregion kommt es seit Beginn des Ukraine-Kriegs immer wieder zu Vorfällen.",
    "date": "2026-11-21T20:10:03.455+01:00"
-  },
-  {
-   "title": "Mexiko nimmt einen der meistgesuchten Drogenbosse fest",
-   "topline": "Großeinsatz des Militärs",
-   "text": "\"Chapo Isidro\" zählte auf der Liste des FBI zu den meistgesuchten Verbrechern.",
-   "date": "2026-11-21T16:36:57.269+01:00"
-  },
-  {
-   "title": "\"Costa Concordia\"-Kapitän auf Bewährung frei",
-   "topline": "Nach Schiffsunglück verurteilt",
-   "text": "Aufgrund eines riskanten Manövers kenterte die \"Costa Concordia\" 2012. 32 Menschen starben.",
-   "date": "2026-11-21T15:07:14.726+01:00"
   }
  ],
  "region": [
   {
-   "title": "Asche, Särge, Hüftgelenke: Ein Besuch im Friedhofsmuseum Hannover",
+   "title": "Inklusion in Form von Porträts: Die Schönheit des Gesehenwerdens",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-21T19:17:48.067+01:00"
+   "date": "2026-11-22T09:16:13.598+01:00"
   },
   {
-   "title": "80 Jahre Europa-Union: Bürgerinitiative feiert Jubiläum",
+   "title": "Weserfähre stellt zwischen Nordenham und Bremerhaven Betrieb ein",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-21T18:31:33.642+01:00"
+   "date": "2026-11-22T08:48:52.666+01:00"
   },
   {
-   "title": "Autos stoßen gegen Militärfahrzeuge: Drei Schwerverletzte",
+   "title": "Kein Funkloch? Warum Telefonate im Auto trotzdem abbrechen können",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-21T17:23:59.891+01:00"
+   "date": "2026-11-22T08:44:27.167+01:00"
   },
   {
-   "title": "Schüsse nach Streit in Imbiss gefallen - alle Beteiligten flüchtig",
+   "title": "Osnabrücks \"Penthouse-JVA\": So sieht das neue Gefängnis aus",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-21T15:43:18.420+01:00"
+   "date": "2026-11-22T08:41:02.726+01:00"
   }
  ],
  "markt": {
