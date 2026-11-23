@@ -1,71 +1,63 @@
 {
  "welt": [
   {
-   "title": "Wer ist schuld am Scheitern des Klimagipfels?",
-   "topline": "Nach Konferenz in Antalya",
-   "text": "Bei der Suche nach möglichen Schuldigen richtet sich der Blick auch auf die Doppelpräsidentschaft.",
-   "date": "2026-11-23T11:42:23.283+01:00"
+   "title": "Keine Athleten mehr unter russischer Flagge",
+   "topline": "EU-Vorschlag für neue Sanktionen",
+   "text": "Russische Sportler sollen bei Wettkämpfen in der EU nicht mehr für ihr Land antreten dürfen.",
+   "date": "2026-11-23T18:23:33.978+01:00"
   },
   {
-   "title": "Eine Übung, drei russische Raketen - und offene Fragen",
-   "topline": "\"Koalition der Willigen\" in Polen",
-   "text": "Hunderte Soldaten aus elf Ländern haben in Polen getestet, wie in der Ukraine Frieden gesichert werden kann.",
-   "date": "2026-11-23T11:30:31.108+01:00"
+   "title": "Warnungen an Russland - \"werden uns verteidigen\"",
+   "topline": "NATO-Tagung in Berlin",
+   "text": "In Berlin endet die NATO-Jahrestagung mit einer deutlichen Warnung an Russland.",
+   "date": "2026-11-23T17:57:55.667+01:00"
   },
   {
-   "title": "Auf der Suche nach der guten Nachricht aus Antalya",
-   "topline": "Gescheiterte Klimakonferenz",
-   "text": "Die Energiewende sei unumkehrbar - sagt sogar China.",
-   "date": "2026-11-23T10:29:40.653+01:00"
+   "title": "Istanbuler Polizei sucht nach streunender Löwin",
+   "topline": "Türkische Metropole",
+   "text": "Ein Löwe streift im Norden der türkischen Metropole umher, Anwohner sollen in ihren Häusern bleiben.",
+   "date": "2026-11-23T15:14:38.897+01:00"
   },
   {
-   "title": "Ukraine bekennt sich zu Zerstörung von Kriegsschiff",
-   "topline": "Angriff auf russische Korvette",
-   "text": "Die russische Korvette \"Merkury\" ging erst vor drei Jahren in Betrieb, jetzt wurde sie zerstört.",
-   "date": "2026-11-23T09:24:41.490+01:00"
+   "title": "\"Für Russland ist Libyen eine Art Rückzugsort\"",
+   "topline": "Angriff auf russisches Kriegsschiff",
+   "text": "In Libyen wächst die Sorge, in den Krieg Russlands gegen die Ukraine hinein gezogen zu werden.",
+   "date": "2026-11-23T14:34:43.978+01:00"
   }
  ],
  "region": [
   {
-   "title": "XXL-Baum für den Reichstag: Fichte aus dem Harz reist nach Berlin",
+   "title": "Säurefässer in Hann. Münden geborgen - Warnungen aufgehoben",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-23T12:35:32.003+01:00"
+   "date": "2026-11-23T22:32:40.428+01:00"
   },
   {
-   "title": "Nach Vollsperrung der A352: Sanierungsarbeiten abgeschlossen",
+   "title": "Winterwetter erreicht Niedersachsen: Schnee im Nordwesten möglich",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-23T12:35:00.718+01:00"
+   "date": "2026-11-23T20:43:20.988+01:00"
   },
   {
-   "title": "NDR Niedersachsen: Unsere Themen bei Instagram!",
+   "title": "\"Sadistisch und unsozial\": Wie ein Halteverbot die Gemüter erhitzt",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-23T12:22:30.753+01:00"
+   "date": "2026-11-23T19:26:44.063+01:00"
   },
   {
-   "title": "Schwerer Unfall bei Bad Nenndorf - Sperrung B442 aufgehoben",
+   "title": "Spitzes Plastik im Teig? Bäckerei Overmeyer ruft Brot zurück",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-23T12:13:25.551+01:00"
+   "date": "2026-11-23T19:08:02.011+01:00"
   }
  ],
  "markt": {
-  "eurusd": 1.099
+  "eurusd": 1.0939
  },
  "geschichte": [
   {
-   "year": 1976,
-   "text": "Jacques Mayol gelingt es als erstem Taucher ohne Atem­gerät, hundert Meter tief zu kommen."
-  },
-  {
-   "year": 1951,
-   "text": "Max Hachenburg, einer der profilier­testen Juristen der Weimarer Republik, stirbt im Exil in den Vereinigten Staaten."
-  },
-  {
-   "year": 1476,
-   "text": "Der Mainzer Erzbischof und Kurfürst erhält die notwendige päpstliche Erlaubnis zur Gründung einer Universität."
+   "year": 1876,
+   "text": "Der Steiner Ruderclub wird als einer der ersten in Österreich gegründet."
   }
  ]
 }
