@@ -1,6 +1,18 @@
 {
  "welt": [
   {
+   "title": "Gefahr für Kiew, Probleme für Russlands Logistik",
+   "topline": "Brücken-Krieg",
+   "text": "Kiew, Saporischschja, Odessa - immer wieder greift Russland ukrainische Brücken an.",
+   "date": "2026-11-25T02:40:52.660+01:00"
+  },
+  {
+   "title": "Lebenserwartung in Kuba erstmals gesunken",
+   "topline": "Weltgesundheitsorganisation",
+   "text": "Die Lebenserwartung in Kuba ist erstmals gesunken, die Säuglingssterblichkeit hat sich mehr als verdoppelt.",
+   "date": "2026-11-25T01:06:58.595+01:00"
+  },
+  {
    "title": "Steinmeier ermutigt Wirtschaft zu Investitionen in Afrika",
    "topline": "Wirtschaftsgipfel in Accra",
    "text": "Bundespräsident Steinmeier hat deutsche Unternehmen dazu aufgerufen, mehr in Afrika zu investieren.",
@@ -11,44 +23,32 @@
    "topline": "Menschenrechtsgerichtshof",
    "text": "Setzt ein Drittstaat Migration gezielt als Druckmittel ein, darf der betroffene EU-Staat Migranten an der Grenze zurückweisen.",
    "date": "2026-11-24T17:24:25.251+01:00"
-  },
-  {
-   "title": "\"Viel zu lange sehen wir alarmierende Zahlen\"",
-   "topline": "UN-Bericht zu Femiziden",
-   "text": "2025 sind etwa 47.000 Frauen und Mädchen von ihren Partnern oder Familienmitgliedern getötet worden.",
-   "date": "2026-11-24T15:58:13.226+01:00"
-  },
-  {
-   "title": "Gericht erlaubt Pushbacks in bestimmten Fällen",
-   "topline": "Zurückweisungen an Grenzen",
-   "text": "Der Europäische Gerichtshof für Menschenrechte (EGMR) hat Pushbacks in bestimmten Fällen für rechtens erklärt.",
-   "date": "2026-11-24T14:28:55.913+01:00"
   }
  ],
  "region": [
   {
-   "title": "Holz trifft Beton: Holzbaupreis für Schule in Langenhagen",
+   "title": "Signalstörung im Deister: S-Bahnen fallen aus",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-24T19:39:28.305+01:00"
+   "date": "2026-11-25T00:00:00.526+01:00"
   },
   {
-   "title": "Tarifstreit bei VW: Erste Verhandlungsrunde endet ergebnislos",
+   "title": "Northeim: Schüler und Vereine starten Training in neuer Sporthalle",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-24T18:36:59.834+01:00"
+   "date": "2026-11-25T00:00:00.097+01:00"
   },
   {
-   "title": "Booster für Bremen? Zehnter Start von Ariane 6 erfolgreich",
+   "title": "Brand auf Balkon breitet sich aus: Großeinsatz für Feuerwehr",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-24T18:32:08.288+01:00"
+   "date": "2026-11-24T22:00:48.626+01:00"
   },
   {
-   "title": "Wissenschaftspreis: Niedersachsen zeichnet Spitzenforschung aus",
+   "title": "Kater \"Gülli\" - vom Sorgenkind zum Social-Media-Star",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-24T18:16:23.822+01:00"
+   "date": "2026-11-24T21:50:14.410+01:00"
   }
  ],
  "markt": {
@@ -56,8 +56,12 @@
  },
  "geschichte": [
   {
-   "year": 1876,
-   "text": "Der Steiner Ruderclub wird als einer der ersten in Österreich gegründet."
+   "year": 1936,
+   "text": "In Berlin wird der Anti­komintern­pakt zwischen dem Deutschen Reich und dem Japa­nischen Kaiser­reich unter­zeichnet."
+  },
+  {
+   "year": 1926,
+   "text": "In Innsbruck stirbt der deutsche Privat­bankier, Mäzen und Pazifist Georg Arnhold."
   }
  ]
 }
