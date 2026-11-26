@@ -1,6 +1,12 @@
 {
  "welt": [
   {
+   "title": "Mindestens 30 Tote bei Großbrand auf Autobahn",
+   "topline": "Ägypten",
+   "text": "Ein mit Treibstoff beladener Lkw hat bei einem Unfall in der Stadt Gizeh einen Großbrand ausgelöst.",
+   "date": "2026-11-25T22:10:04.344+01:00"
+  },
+  {
    "title": "Wird Bestechungsvorwurf gegen Netanjahu fallen gelassen?",
    "topline": "Prozess gegen Israels Premier",
    "text": "Seit Jahren muss sich Israels Premier wegen Betrugs, Untreue und Bestechlichkeit vor Gericht verantworten.",
@@ -17,42 +23,41 @@
    "topline": "Lockerung der Regeln bleibt bestehen",
    "text": "Unternehmen können wegen der anhaltenden Energiekrise weiterhin mit staatlichen Zuschüssen rechnen.",
    "date": "2026-11-25T17:29:03.780+01:00"
-  },
-  {
-   "title": "USA kündigen neue Zölle an - auch gegen EU und China",
-   "topline": "14 Handelspartner betroffen",
-   "text": "Auf chinesische Waren sollen 20 Prozent fällig werden. Für die EU gilt eine Obergrenze von 15 Prozent.",
-   "date": "2026-11-25T16:18:25.724+01:00"
   }
  ],
  "region": [
   {
-   "title": "Frauenarzt für Norderney: Warum Fachärzte auf Inseln fehlen",
+   "title": "Vogelgrippe im Grenzgebiet: Stallpflicht in der Grafschaft Bentheim",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-25T21:50:00.022+01:00"
+   "date": "2026-11-26T01:46:48.507+01:00"
   },
   {
-   "title": "Rechtsextreme Jugendgruppe \"Terror 18\": Beschuldigte wieder frei",
+   "title": "Stieftochter mehrfach missbraucht: 44-Jähriger kommt ins Gefängnis",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-25T20:53:20.702+01:00"
+   "date": "2026-11-26T01:44:59.096+01:00"
   },
   {
-   "title": "Sensation in Oldenburg: Pflanze soll erstmals in Deutschland blühen",
+   "title": "Für 22 Millionen Euro: Neues Eislabor für Polarforscher in Bremerhaven",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-25T20:51:11.928+01:00"
+   "date": "2026-11-26T01:42:33.418+01:00"
   },
   {
-   "title": "Trotz neuer Regeln: Warum erst wenige Wölfe geschossen wurden",
+   "title": "Lenglern macht Schule: Sprengstoffreste mit Kompost reinigen",
    "topline": "Niedersachsen",
    "text": "",
-   "date": "2026-11-25T20:44:11.221+01:00"
+   "date": "2026-11-26T01:40:12.501+01:00"
   }
  ],
  "markt": {
   "eurusd": 1.0935
  },
- "geschichte": []
+ "geschichte": [
+  {
+   "year": 1976,
+   "text": "Die Punk-Band Sex Pistols veröf­fentlicht ihre erste Single Anarchy in the U. K."
+  }
+ ]
 }
