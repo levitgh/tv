@@ -1,6 +1,18 @@
 {
  "welt": [
   {
+   "title": "Dodik hebt Sohn auf den Thron",
+   "topline": "Bosnien und Herzogowina",
+   "text": "2025 musste Dodik nach internationalem Druck zurücktreten. Nun macht er seinen Sohn zum Regierungschef.",
+   "date": "2026-11-27T02:29:29.945+01:00"
+  },
+  {
+   "title": "Merz verkündet vorzeitiges Ende des EU-Sondergipfels",
+   "topline": "Haushaltsberatungen in Brüssel",
+   "text": "Keine Einung wurde beim Sondergipfel gefunden - es geht um viele Milliarden für den EU-Haushalt.",
+   "date": "2026-11-27T01:02:22.544+01:00"
+  },
+  {
    "title": "Merz fordert weitere Kürzung der EU-Finanzen",
    "topline": "Haushaltsgipfel in Brüssel",
    "text": "Den jüngsten Kompromiss lehnt der Bundeskanzler ab. Er knüpft seine Zustimmung außerdem weiter an die Ukraine-Hilfe.",
@@ -11,21 +23,15 @@
    "topline": "Iran-Krieg",
    "text": "Die beiden Italiener arbeiteten bei dem deutschen Rüstungskonzern Rheinmetall.",
    "date": "2026-11-26T19:08:12.790+01:00"
-  },
-  {
-   "title": "Warum die Bundeswehr im Senegal trainiert",
-   "topline": "Übung \"Schneller Adler\"",
-   "text": "Im Senegal übt die Bundeswehr mit der dortigen Armee die Evakuierung aus einem fiktiven Krisenstaat.",
-   "date": "2026-11-26T18:59:05.586+01:00"
-  },
-  {
-   "title": "Dieseltanker vor Ibiza gekentert",
-   "topline": "Ein Seemann getötet",
-   "text": "Ob Treibstoff ins Meer gelangt ist, ist unklar. Wegen möglicher Umweltgefahren wurde ein Notfallplan aktiviert.",
-   "date": "2026-11-26T14:51:28.151+01:00"
   }
  ],
  "region": [
+  {
+   "title": "Südschnellweg in Hannover am Wochenende gesperrt",
+   "topline": "Niedersachsen",
+   "text": "",
+   "date": "2026-11-27T00:00:00.388+01:00"
+  },
   {
    "title": "Zweiter Platz beim Deutschen Kita-Preis geht nach Osnabrück",
    "topline": "Niedersachsen",
@@ -43,12 +49,6 @@
    "topline": "Niedersachsen",
    "text": "",
    "date": "2026-11-26T21:10:56.023+01:00"
-  },
-  {
-   "title": "Verbraucherzentrale Niedersachsen mahnt Anthropic und OpenAI ab",
-   "topline": "Niedersachsen",
-   "text": "",
-   "date": "2026-11-26T21:09:44.929+01:00"
   }
  ],
  "markt": {
@@ -56,8 +56,12 @@
  },
  "geschichte": [
   {
-   "year": 1976,
-   "text": "Die Punk-Band Sex Pistols veröf­fentlicht ihre erste Single Anarchy in the U. K."
+   "year": 1926,
+   "text": "Die Urauf­führung von Béla Bartóks Tanz­pantomime Der wunder­bare Mandarin löst in Köln einen Theater­skandal aus."
+  },
+  {
+   "year": 176,
+   "text": "Der römische Kaiser Mark Aurel erhebt seinen fünf­zehn­jährigen Sohn Commodus (Bild) zum Mit­herrscher."
   }
  ]
 }
