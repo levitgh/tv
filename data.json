@@ -1,31 +1,37 @@
 {
  "welt": [
   {
+   "title": "Kaum Geld - und dann der Iran-Krieg",
+   "topline": "Treibstoffkrise in Malawi",
+   "text": "Malawi leidet unter einer extremen Treibstoffkrise. Sie wirkt sich auf alle Bereiche des Lebens aus.",
+   "date": "2026-11-28T04:34:41.026+01:00"
+  },
+  {
+   "title": "US-Militär beschießt Frachter im Golf von Oman",
+   "topline": "Verstoß gegen Blockade",
+   "text": "Die Besatzung habe versucht, die US-Blockade iranischer Häfen zu durchbrechen.",
+   "date": "2026-11-28T04:27:38.070+01:00"
+  },
+  {
+   "title": "Durchsuchung bei Le Pens früherem Bürochef",
+   "topline": "Vertrauliche Informationen erhalten?",
+   "text": "Die Parteizentrale des Rassemblement National und die Wohnung des früheren Bürochefs von Le Pen sind durchsucht worden.",
+   "date": "2026-11-28T02:41:50.065+01:00"
+  },
+  {
    "title": "Gefahr für Umwelt durch gekenterten Tanker gering",
    "topline": "Schiffsunglück vor Ibiza",
    "text": "Erste Erkenntnisse zeigen: Vom gekenterten Dieseltanker vor Ibiza scheint keine direkte Umweltgefahr auszugehen.",
    "date": "2026-11-27T16:03:21.689+01:00"
-  },
-  {
-   "title": "Studenten nominieren Chemieprofessor als Staatsoberhaupt",
-   "topline": "Präsidentschaftswahl in Serbien",
-   "text": "Die Parlamentswahl im September hatten Serbiens Studentenliste bereits überraschend gewonnen.",
-   "date": "2026-11-27T14:37:34.327+01:00"
-  },
-  {
-   "title": "Über die schwierige Suche nach einem Kompromiss",
-   "topline": "Gescheiterter EU-Haushaltsgipfel",
-   "text": "Die Interessen der EU-Mitgliedsstaaten liegen noch zu weit auseinander für einen Kompromiss beim EU-Haushalt.",
-   "date": "2026-11-27T14:18:17.769+01:00"
-  },
-  {
-   "title": "In fünf \"Hunger-Hotspots\" muss schnell gehandelt werden",
-   "topline": "UN-Bericht",
-   "text": "Krieg, Dürre und Budgetkürzungen bei Hilfsorganisationen: Die UN befürchtet in fünf Regionen eine Hungerkrise.",
-   "date": "2026-11-27T13:09:57.238+01:00"
   }
  ],
  "region": [
+  {
+   "title": "NDR Niedersachsen: Unsere Themen bei Instagram!",
+   "topline": "Niedersachsen",
+   "text": "",
+   "date": "2026-11-28T00:38:59.364+01:00"
+  },
   {
    "title": "Kein \"Ugly Christmas Tree 2.0\": Weihnachtsbaum in Holzminden steht",
    "topline": "Niedersachsen",
@@ -43,12 +49,6 @@
    "topline": "Niedersachsen",
    "text": "",
    "date": "2026-11-27T21:13:17.149+01:00"
-  },
-  {
-   "title": "\"Freiheit\": Angela Merkel liest in Emden aus ihrem Buch",
-   "topline": "Niedersachsen",
-   "text": "",
-   "date": "2026-11-27T21:06:40.024+01:00"
   }
  ],
  "markt": {
@@ -56,12 +56,20 @@
  },
  "geschichte": [
   {
-   "year": 1926,
-   "text": "Die Urauf­führung von Béla Bartóks Tanz­pantomime Der wunder­bare Mandarin löst in Köln einen Theater­skandal aus."
+   "year": 1986,
+   "text": "In der Republik China (Taiwan) wird der Taroko-National­park eingerichtet."
   },
   {
-   "year": 176,
-   "text": "Der römische Kaiser Mark Aurel erhebt seinen fünf­zehn­jährigen Sohn Commodus (Bild) zum Mit­herrscher."
+   "year": 1986,
+   "text": "Die Ägyptologin Elizabeth Thomas stirbt."
+  },
+  {
+   "year": 1881,
+   "text": "In Wien kommt der Schriftsteller Stefan Zweig (Sternstunden der Mensch­heit, Die Welt von Gestern, Schachnovelle) zur Welt."
+  },
+  {
+   "year": 1821,
+   "text": "Panama erklärt seine Unabhängigkeit von Spanien und tritt Groß­kolumbien bei."
   }
  ]
 }
